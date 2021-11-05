@@ -1,0 +1,776 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>闭包实现单例模式 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="二叉树路径总和.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../readme.html">
+            
+                <a href="../readme.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_basis/">
+            
+                <a href="../2_basis/">
+            
+                    
+                    计算机基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_basis/操作系统.html">
+            
+                <a href="../2_basis/操作系统.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_basis/计算机网络.html">
+            
+                <a href="../2_basis/计算机网络.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_basis/数据结构与算法.html">
+            
+                <a href="../2_basis/数据结构与算法.html">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_basis/JAVA.html">
+            
+                <a href="../2_basis/JAVA.html">
+            
+                    
+                    JAVA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_http/">
+            
+                <a href="../3_http/">
+            
+                    
+                    HTTP/HTTPS/浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_http/HTTP.html">
+            
+                <a href="../3_http/HTTP.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_http/HTTPS.html">
+            
+                <a href="../3_http/HTTPS.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3_http/浏览器.html">
+            
+                <a href="../3_http/浏览器.html">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4_JavaScript/">
+            
+                <a href="../4_JavaScript/">
+            
+                    
+                    JavaScript/ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4_JavaScript/JavaScript.html">
+            
+                <a href="../4_JavaScript/JavaScript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4_JavaScript/ES6.html">
+            
+                <a href="../4_JavaScript/ES6.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5_vue/">
+            
+                <a href="../5_vue/">
+            
+                    
+                    VUE
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5_vue/VUE的理解和MVVM框架.html">
+            
+                <a href="../5_vue/VUE的理解和MVVM框架.html">
+            
+                    
+                    VUE的理解和MVVM框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5_vue/VUE的生命周期.html">
+            
+                <a href="../5_vue/VUE的生命周期.html">
+            
+                    
+                    VUE的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5_vue/组件的通信.html">
+            
+                <a href="../5_vue/组件的通信.html">
+            
+                    
+                    组件的通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../5_vue/">
+            
+                <a href="../5_vue/">
+            
+                    
+                    父子组件生命周期执行流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../5_vue/">
+            
+                <a href="../5_vue/">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../5_vue/虚拟dom和diff算法.html">
+            
+                <a href="../5_vue/虚拟dom和diff算法.html">
+            
+                    
+                    虚拟dom和diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../5_vue/">
+            
+                <a href="../5_vue/">
+            
+                    
+                    SSR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../5_vue/">
+            
+                <a href="../5_vue/">
+            
+                    
+                    vue3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../5_vue/">
+            
+                <a href="../5_vue/">
+            
+                    
+                    vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6_html/html.html">
+            
+                <a href="../6_html/html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7_css/css.html">
+            
+                <a href="../7_css/css.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    来编个程序吧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.9.1" data-path="闭包实现单例模式.html">
+            
+                <a href="闭包实现单例模式.html">
+            
+                    
+                    闭包实现单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="二叉树路径总和.html">
+            
+                <a href="二叉树路径总和.html">
+            
+                    
+                    二叉树路径总和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="二分查找.html">
+            
+                <a href="二分查找.html">
+            
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="防抖和节流.html">
+            
+                <a href="防抖和节流.html">
+            
+                    
+                    防抖和节流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="归并&快速排序.html">
+            
+                <a href="归并&快速排序.html">
+            
+                    
+                    归并&快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="金钱格式化.html">
+            
+                <a href="金钱格式化.html">
+            
+                    
+                    金钱格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="全排列.html">
+            
+                <a href="全排列.html">
+            
+                    
+                    全排列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="实现set.html">
+            
+                <a href="实现set.html">
+            
+                    
+                    实现set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="数组去重.html">
+            
+                <a href="数组去重.html">
+            
+                    
+                    数组去重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="N数之和.html">
+            
+                <a href="N数之和.html">
+            
+                    
+                    N数之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="promise相关.html">
+            
+                <a href="promise相关.html">
+            
+                    
+                    promise相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >闭包实现单例模式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x95ED;&#x5305;&#x5B9E;&#x73B0;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;">&#x95ED;&#x5305;&#x5B9E;&#x73B0;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</h1>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> SingleTon = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">var</span> instance;
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CreateSingleTon</span> </span>{
+        <span class="hljs-keyword">constructor</span> (name) {
+            <span class="hljs-keyword">if</span>(instance) <span class="hljs-keyword">return</span> instance;
+            <span class="hljs-keyword">this</span>.name = name;
+            <span class="hljs-keyword">this</span>.getName();
+            <span class="hljs-keyword">return</span> instance = <span class="hljs-keyword">this</span>;
+        }
+
+        getName() {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;
+        }
+    }
+    <span class="hljs-keyword">return</span> CreateSingleTon;
+}();
+
+<span class="hljs-keyword">var</span> a = <span class="hljs-keyword">new</span> SingleTon(<span class="hljs-string">&apos;instance1&apos;</span>);
+<span class="hljs-built_in">console</span>.log(a.getName()); <span class="hljs-comment">//&#x8F93;&#x51FA;instance1</span>
+<span class="hljs-keyword">var</span> b = <span class="hljs-keyword">new</span> SingleTon(<span class="hljs-string">&apos;instance2&apos;</span>);
+<span class="hljs-built_in">console</span>.log(b.getName()); <span class="hljs-comment">//&#x8F93;&#x51FA;instance1</span>
+<span class="hljs-built_in">console</span>.log(a === b); <span class="hljs-comment">//&#x8F93;&#x51FA;true</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 来编个程序吧">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="二叉树路径总和.html" class="navigation navigation-next " aria-label="Next page: 二叉树路径总和">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"闭包实现单例模式","level":"1.9.1","depth":2,"next":{"title":"二叉树路径总和","level":"1.9.2","depth":2,"path":"8_procedure/二叉树路径总和.md","ref":"8_procedure/二叉树路径总和.md","articles":[]},"previous":{"title":"来编个程序吧","level":"1.9","depth":1,"path":"8_procedure/README.md","ref":"8_procedure/README.md","articles":[{"title":"闭包实现单例模式","level":"1.9.1","depth":2,"path":"8_procedure/闭包实现单例模式.md","ref":"8_procedure/闭包实现单例模式.md","articles":[]},{"title":"二叉树路径总和","level":"1.9.2","depth":2,"path":"8_procedure/二叉树路径总和.md","ref":"8_procedure/二叉树路径总和.md","articles":[]},{"title":"二分查找","level":"1.9.3","depth":2,"path":"8_procedure/二分查找.md","ref":"8_procedure/二分查找.md","articles":[]},{"title":"防抖和节流","level":"1.9.4","depth":2,"path":"8_procedure/防抖和节流.md","ref":"8_procedure/防抖和节流.md","articles":[]},{"title":"归并&快速排序","level":"1.9.5","depth":2,"path":"8_procedure/归并&快速排序.md","ref":"8_procedure/归并&快速排序.md","articles":[]},{"title":"金钱格式化","level":"1.9.6","depth":2,"path":"8_procedure/金钱格式化.md","ref":"8_procedure/金钱格式化.md","articles":[]},{"title":"全排列","level":"1.9.7","depth":2,"path":"8_procedure/全排列.md","ref":"8_procedure/全排列.md","articles":[]},{"title":"实现set","level":"1.9.8","depth":2,"path":"8_procedure/实现set.md","ref":"8_procedure/实现set.md","articles":[]},{"title":"数组去重","level":"1.9.9","depth":2,"path":"8_procedure/数组去重.md","ref":"8_procedure/数组去重.md","articles":[]},{"title":"N数之和","level":"1.9.10","depth":2,"path":"8_procedure/N数之和.md","ref":"8_procedure/N数之和.md","articles":[]},{"title":"promise相关","level":"1.9.11","depth":2,"path":"8_procedure/promise相关.md","ref":"8_procedure/promise相关.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"8_procedure/闭包实现单例模式.md","mtime":"2020-05-28T11:09:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-04T12:31:20.031Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
