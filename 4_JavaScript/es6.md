@@ -248,3 +248,109 @@ let bosh = function crs(){}
 export bosh;
 import {crc} from 'crc';
 ```
+
+**十七、js数组遍历的几种方式**
+
+  forEach,for循环，some,map,filter
+
+1.forEach()
+作用：遍历数组，取出数组中的每一项
+参数：function(value,index,array){}
+返回值：没有返回值
+
+2.filter()
+作用：遍历数组，筛选出满足条件的项，将满足条件的项放到新数组中，并且返回
+参数：function(value,index,array){}
+返回值：返回存放了满足条件的项的新数组
+如果发现回调函数，返回了true，就将当前的value，放到新数组中
+
+3.some()
+作用：遍历数组，判断是否有满足条件的元素，如果有返回true,如果没有返回false 查找数组唯一的元素
+参数：function(value,index,array){}
+返回值：返回true/false
+
+如果发现回调函数，返回了true,就会停止遍历
+
+4.map()
+map()生成一个新数组 其结果是该数组每一个元素 调用指定函数的 
+返回值：符合条件的数组
+
+5.every()
+every() 用来检测该数组中每一个元素 是否都满足指定函数的条件，返回的是 布尔值 如果给定是一个空数组，则返回true
+
+**十八：promise的优点和缺点**
+- promise的缺点
+1. 无法取消Promise,一旦新建它就会立即执行，无法中途取消。
+2. 如果不设置回调函数，promise内部抛出的错误，不会反应到外部。
+3. 当处于pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。
+
+- promis的优点
+1. 解决回调地狱（Callback Hell）问题
+（1）有时我们要进行一些相互间有依赖关系的异步操作，比如有多个请求，后一个的请求需要上一次请求的返回结果。过去常规做法只能 callback 层层嵌套，但嵌套层数过多的话就会有 callback hell 问题
+（2）如果使用 promises 的话，代码就会变得扁平且更可读了。前面提到 then 返回了一个 promise，因此我们可以将 then 的调用不停地串连起来。其中 then 返回的 promise 装载了由调用返回的值。
+2. 更好地进行错误捕获
+多重嵌套 callback 除了会造成上面讲的代码缩进问题，更可怕的是可能会造成无法捕获异常或异常捕获不可控。
+
+
+**十九、判断数组的方法**
+
+1. 从原型入手:Array.prototype.isPrototypeOf(obj);
+利用isPrototypeOf()方法，判定Array是不是在obj的原型链中，如果是，则返回true,否则false。
+2. 从构造函数入手:obj instanceof Array
+3. 跨原型链调用toString(): Object.prototype.toString.call(obj)
+每一个继承 Object 的对象都有 toString方法，如果 toString 方法没有重写的话，会返回 [Object type]，其中 type 为对象的类型。但当变量类型不为对象时，使用 toString 方法会直接返回数据内容的字符串，所以我们需要使用call或者apply方法来改变toString方法的执行上下文。
+4. ES5新增的方法：Array.isArray()
+
+**二十、函数防抖和节流**
+1、防抖（debounce）：所谓防抖，就是指触发事件后在 n 秒内函数只能执行一次，如果在 n 秒内又触发了事件，则会重新计算函数执行时间。
+```
+function debounce(func, wait) {
+    let timeout;
+    return function () {
+        let context = this;
+        let args = arguments;
+
+        if (timeout) clearTimeout(timeout);
+        
+        timeout = setTimeout(() => {
+            func.apply(context, args)
+        }, wait);
+    }
+}
+```
+2、节流（throttle）：所谓节流，就是指连续触发事件但是在 n 秒中只执行一次函数。节流会稀释函数的执行频率。
+
+对于节流，一般有两种方式可以实现，分别是时间戳版和定时器版。
+时间戳版：
+```
+function throttle(func, wait) {
+    let previous = 0;
+    return function() {
+        let now = Date.now();
+        let context = this;
+        let args = arguments;
+        if (now - previous > wait) {
+            func.apply(context, args);
+            previous = now;
+        }
+    }
+}
+```
+
+定时器版:
+```
+function throttle(func, wait) {
+    let timeout;
+    return function() {
+        let context = this;
+        let args = arguments;
+        if (!timeout) {
+            timeout = setTimeout(() => {
+                timeout = null;
+                func.apply(context, args)
+            }, wait)
+        }
+
+    }
+}
+```

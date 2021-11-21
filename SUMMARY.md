@@ -1,6 +1,5 @@
 # Summary
 
-* [Introduction](README.md)
 * [前言](readme.md)
 * [计算机基础知识](2_basis/README.md)
     * [操作系统](2_basis/操作系统.md)
@@ -21,11 +20,11 @@
     * [父子组件生命周期执行流程](5_vue/README.md)
     * [路由](5_vue/README.md)
     * [虚拟dom和diff算法](5_vue/虚拟dom和diff算法.md)
-    * [SSR](5_vue/README.md) 
+    * [nextTick](5_vue/nextTick.md) 
     * [vue3](5_vue/README.md)
     * [vuex](5_vue/README.md)
 * [HTML](6_html/html.md)
-* [CSS](7_css/css.md)
+* [CSS](7_css/css.md) 
 * [来编个程序吧](8_procedure/README.md)
     * [闭包实现单例模式](8_procedure/闭包实现单例模式.md)
     * [二叉树路径总和](8_procedure/二叉树路径总和.md)

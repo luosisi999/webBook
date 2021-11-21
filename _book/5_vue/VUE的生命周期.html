@@ -385,12 +385,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="./">
+        <li class="chapter " data-level="1.6.7" data-path="nextTick.html">
             
-                <a href="./">
+                <a href="nextTick.html">
             
                     
-                    SSR
+                    nextTick
             
                 </a>
             
@@ -666,7 +666,10 @@
 <p>Vue&#x5B9E;&#x4F8B;&#x4ECE;&#x521B;&#x5EFA;&#x5230;&#x9500;&#x6BC1;&#x7684;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#x751F;&#x547D;&#x5468;&#x671F;</p>
 <p>&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x2192;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x2192;&#x7F16;&#x8BD1;&#x6A21;&#x677F;&#x2192;&#x6302;&#x8F7D;DOM-&#x6E32;&#x67D3;&#x2192;&#x66F4;&#x65B0;-&#x6E32;&#x67D3;&#x2192;&#x5378;&#x8F7D;</p>
 <p>&#x4F5C;&#x7528;&#xFF1A;vue&#x6240;&#x6709;&#x7684;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#x90FD;&#x662F;&#x56F4;&#x7ED5;&#x5176;&#x751F;&#x547D;&#x5468;&#x671F;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x5728;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x4E0D;&#x540C;&#x9636;&#x6BB5;&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7EC4;&#x4EF6;&#x6570;&#x636E;&#x7BA1;&#x7406;&#x548C;DOM&#x6E32;&#x67D3;&#x4E24;&#x5927;&#x91CD;&#x8981;&#x529F;&#x80FD;&#x3002;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x6709;&#x591A;&#x4E2A;&#x4E8B;&#x4EF6;&#x94A9;&#x5B50;&#xFF0C;&#x5728;&#x63A7;&#x5236;&#x6574;&#x4E2A;vue&#x5B9E;&#x4F8B;&#x7684;&#x8FC7;&#x7A0B;&#x65F6;&#x66F4;&#x5BB9;&#x6613;&#x5F62;&#x6210;&#x597D;&#x7684;&#x903B;&#x8F91;&#x3002;</p>
-<p>&#x751F;&#x547D;&#x5468;&#x671F;&#x5206;&#x4E3A;8&#x4E2A;&#x9636;&#x6BB5;&#xFF1A;&#x521B;&#x5EFA;&#x524D;/&#x540E;&#x3001;&#x8F7D;&#x5165;&#x524D;/&#x540E;&#x3001;&#x66F4;&#x65B0;&#x524D;/&#x540E;&#x3001;&#x9500;&#x6BC1;&#x524D;/&#x540E;</p>
+<p>&#x751F;&#x547D;&#x5468;&#x671F;&#x5206;&#x4E3A;8&#x4E2A;&#x9636;&#x6BB5;&#xFF1A;&#x521B;&#x5EFA;&#x524D;/&#x540E;&#x3001;&#x8F7D;&#x5165;&#x524D;/&#x540E;&#x3001;&#x66F4;&#x65B0;&#x524D;/&#x540E;&#x3001;&#x9500;&#x6BC1;&#x524D;/&#x540E;
+&#x7B2C;&#x4E00;&#x6B21;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x4F1A;&#x89E6;&#x53D1;beforeCreate,created, beforeMount,mounted&#x56DB;&#x4E2A;&#x94A9;&#x5B50;&#x51FD;&#x6570;
+DOM&#x6E32;&#x67D3;&#x5728;mounted&#x8FD9;&#x4E2A;&#x5468; &#x671F;&#x5C31;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;
+<img src="../Images/&#x751F;&#x547D;&#x5468;&#x671F;&#x6D41;&#x7A0B;&#x56FE;.png" alt=""></p>
 <table>
 <thead>
 <tr>
@@ -718,67 +721,6 @@
 </tr>
 </tbody>
 </table>
-<p>&#x7B2C;&#x4E00;&#x6B21;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x65F6;&#x89E6;&#x53D1;&#xFF1A;beforeCreate&#x3001;created&#x3001;beforeMount&#x3001;mounted</p>
-<h1 id="vue&#x7684;&#x6BCF;&#x4E00;&#x5468;&#x671F;&#x90FD;&#x5E72;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;">Vue&#x7684;&#x6BCF;&#x4E00;&#x5468;&#x671F;&#x90FD;&#x5E72;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;</h1>
-<p>beforeCreate:</p>
-<blockquote>
-<ol>
-<li>&#x7236;&#x5B50;&#x5173;&#x7CFB;&#x786E;&#x8BA4;(parent/parent/parent/children&#x5DF2;&#x7ECF;&#x6709;&#x4E86;)</li>
-<li>&#x6839;&#x5143;&#x7D20;&#x786E;&#x8BA4;($root)</li>
-<li>&#x521D;&#x59CB;&#x5316;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;,&#x5982;:on/on/on/emit/once/once/once/off</li>
-<li>&#x521D;&#x59CB;&#x5316;&#x63D2;&#x69FD;(slots),&#x521D;&#x59CB;&#x5316;_c&#x51FD;&#x6570;/slots),&#x521D;&#x59CB;&#x5316;_c&#x51FD;&#x6570;/slots),&#x521D;&#x59CB;&#x5316;_c&#x51FD;&#x6570;/createElement&#x51FD;&#x6570;(&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x90FD;&#x662F;&#x8C03;&#x7528;createElement&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x8282;&#x70B9;)</li>
-<li>&#x5C06;attrs/attrs/attrs/listeners&#x5B9A;&#x4E49;&#x6210;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x5C5E;&#x6027;</li>
-<li>&#x5728;&#x5B9E;&#x4F8B;&#x4E0A;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E9B;&#x53D8;&#x91CF;,&#x5982;&#xFF1A;_isMounted,_isDestroyed,_watcher...&#x7B49;</li>
-<li>&#x6B64;&#x65F6;&#x6570;&#x636E;&#x8FD8;&#x6CA1;&#x6709;&#x88AB;&#x4EE3;&#x7406;&#xFF0C;&#x8FD8;&#x4E0D;&#x662F;&#x54CD;&#x5E94;&#x5F0F;&#x7684;</li>
-<li>&#x8C03;&#x7528;beforeCreate&#x94A9;&#x5B50;&#x51FD;&#x6570;</li>
-</ol>
-</blockquote>
-<p>created:</p>
-<blockquote>
-<ol>
-<li>&#x521D;&#x59CB;&#x5316;inject&#xFF0C;inject&#x7528;&#x6765;&#x6CE8;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x6E90;&#x7801;&#x5185;&#x90E8;&#x5C31;&#x662F;&#x4E00;&#x4E2A;while&#x5FAA;&#x73AF;&#xFF0C;&#x4ECE;&#x7EC4;&#x4EF6;&#x81EA;&#x8EAB;&#x5411;&#x7236;&#x7EA7;&#x67E5;&#x627E;&#xFF0C;&#x4E00;&#x76F4;&#x627E;&#x5230;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x4E2D;&#x6709;provide&#x5C5E;&#x6027;&#x7684;&#xFF0C;&#x4E00;&#x822C;&#x5199;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x4E0D;&#x63A8;&#x8350;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x6765;&#x6E90;&#x4E0D;&#x6E05;&#x6670;&#xFF0C;&#x81EA;&#x5DF1;&#x5C01;&#x88C5;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x4F1A;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7237;/&#x5B59;&#x901A;&#x8BAF;&#xFF0C;&#x6B64;&#x65F6;&#x6570;&#x636E;&#x8FD8;&#x4E0D;&#x662F;&#x54CD;&#x5E94;&#x5F0F;&#x7684;</li>
-<li>&#x521D;&#x59CB;&#x5316;props&#x3001;&#x521D;&#x59CB;&#x5316;methods&#x3001;&#x521D;&#x59CB;&#x5316;data&#x3001;&#x521D;&#x59CB;&#x5316;computed&#x3001;&#x521D;&#x59CB;&#x5316;watch&#xFF0C;&#x662F;&#x6709;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x7684;</li>
-<li>&#x5728;&#x521D;&#x59CB;&#x5316;data&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x52AB;&#x6301;&#xFF0C;&#x6B64;&#x65F6;&#x6570;&#x636E;&#x5206;&#x4E3A;2&#x79CD;&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x5185;&#x90E8;&#x4F1A;&#x5FAA;&#x73AF;&#x5BF9;&#x8C61;,&#x5C06;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x90FD;&#x8C03;&#x7528;defineReactive&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x6210;&#x54CD;&#x5E94;&#x5F0F;,defineReactive&#x51FD;&#x6570;&#x5185;&#x90E8;&#x662F;&#x7528;Object.defineProperty&#x6765;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x503C;&#x8FD8;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x9012;&#x5F52;&#x5B9A;&#x4E49;&#x6210;&#x54CD;&#x5E94;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x52AB;&#x6301;&#x6570;&#x7EC4;&#x7684;7&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5206;&#x522B;&#x662F;&apos;push&apos;, &apos;pop&apos;,&apos;shift&apos;,&apos;unshift&apos;,&apos;splice&apos;, &apos;sort&apos;, &apos;reverse&apos;,&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x90FD;&#x4F1A;&#x5F71;&#x54CD;&#x539F;&#x6570;&#x7EC4;&#xFF0C;&#x5185;&#x90E8;&#x4F1A;&#x5C06;&#x8FD9;7&#x4E2A;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x91CD;&#x5199;&#xFF0C;&#x7528;&#x6237;&#x8C03;&#x7528;&#x8FD9;7&#x4E2A;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x8FD8;&#x662F;&#x8C03;&#x7528;&#x6570;&#x7EC4;&#x672C;&#x8EAB;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x5185;&#x90E8;&#x4F1A;&#x53BB;&#x901A;&#x77E5;watcher&#x66F4;&#x65B0;&#xFF0C;&#x800C;&#x4E14;&#x5982;&#x679C;&#x7528;&#x6237;&#x662F;&#x7528;push&#x3001;unshift&#x3001;splice&#x8FD9;3&#x4E2A;&#x65B9;&#x6CD5;&#x7ED9;&#x6570;&#x7EC4;&#x589E;&#x52A0;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5185;&#x90E8;&#x4F1A;&#x62FF;&#x5230;&#x589E;&#x52A0;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5224;&#x65AD;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x662F;&#x4E0D;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x4F1A;&#x518D;&#x6B21;&#x5B9A;&#x4E49;&#x6210;&#x54CD;&#x5E94;&#x5F0F;&#xFF0C;&#x88AB;&#x52AB;&#x6301;&#x8FC7;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x6709;&#x4E00;&#x4E2A;<strong>ob</strong>&#x5C5E;&#x6027;</li>
-<li>&#x521D;&#x59CB;&#x5316;provide,&#x5982;&#x679C;provide&#x7684;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x5185;&#x90E8;&#x7684;this&#x6307;&#x5411;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;</li>
-<li>&#x8C03;&#x7528;created&#x94A9;&#x5B50;&#x51FD;&#x6570;</li>
-</ol>
-</blockquote>
-<p>beforeMount:</p>
-<blockquote>
-<ol>
-<li>&#x770B;&#x5B9E;&#x4F8B;&#x4E2D;&#x662F;&#x5426;&#x63D0;&#x4F9B;&#x4E86;render&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#xFF0C;&#x4F1A;&#x8C03;&#x7528;compileToFunction&#x7F16;&#x8BD1;&#x6210;&#x51FD;&#x6570;,compileToFunction&#x4E2D;&#x4E3B;&#x8981;&#x505A;&#x4E86;3&#x4EF6;&#x4E8B;:
-1.&#x5C06;&#x6A21;&#x677F;&#x7F16;&#x8BD1;&#x6210;ast&#x8BED;&#x6CD5;&#x6811;(ast&#x7528;&#x662F;&#x6765;&#x63CF;&#x8FF0;&#x8BED;&#x6CD5;&#x5C42;&#x9762;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&#x6807;&#x7B7E;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5C5E;&#x6027;&#x662F;&#x4EC0;&#x4E48;&#x7B49;&#x7B49;)&#xFF0C;&#x5185;&#x90E8;&#x4F1A;&#x7528;&#x6B63;&#x5219;&#x4E0D;&#x505C;&#x7684;&#x53BB;&#x5339;&#x914D;&#x6807;&#x7B7E;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5339;&#x914D;&#x4E00;&#x70B9;&#x5C31;&#x5220;&#x4E00;&#x70B9;&#xFF0C;&#x6700;&#x540E;&#x5339;&#x914D;&#x7ED3;&#x675F;&#xFF0C;&#x6A21;&#x677F;&#x4E5F;&#x88AB;&#x5220;&#x5B8C;&#x4E86;&#xFF0C;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;ast&#x6811;
-2.&#x5C06;ast&#x8BED;&#x6CD5;&#x6811;&#x7F16;&#x8BD1;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4EE3;&#x7801;,&#x4F8B;&#x5982;:1&#x4F1A;&#x5148;&#x8F6C;&#x6210;{tag:&apos;div&apos;,attrs:[{id:&apos;app&apos;}],1},&#x7136;&#x540E;&#x7F16;&#x8BD1;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x4EE3;&#x7801;&#xFF0C;&#x5982;: _c(&apos;div&apos;,{id:&quot;app&quot;},_v(1)) ,&#x8FD9;&#x4E2A;&#x4EE3;&#x7801;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7684;
-&#x901A;&#x8FC7;new Function + with&#x8BED;&#x6CD5;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;&#x6210;&#x51FD;&#x6570;&#xFF0C;&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x53D8;&#x6210;&#x192; anonymous(){with(this){return _c(&apos;div&apos;,{id:&quot;app&quot;},_v(1)) }}</li>
-<li>&#x4EE5;&#x4E0A;&#x7F16;&#x8BD1;&#x51FA;&#x6765;&#x7684;&#x51FD;&#x6570;&#x5C31;&#x662F;render&#x51FD;&#x6570;</li>
-<li>&#x8C03;&#x7528;beforeMount&#x94A9;&#x5B50;&#x51FD;&#x6570;</li>
-</ol>
-</blockquote>
-<p>mounted:</p>
-<blockquote>
-<ol>
-<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6E32;&#x67D3;Watcher</li>
-<li>&#x5728;Watcher&#x4E2D;&#x505A;&#x4E86;&#x5DF2;&#x4E0B;&#x4E09;&#x4EF6;&#x4E8B;:1. &#x8C03;&#x7528;pushTarget&#x51FD;&#x6570;&#x5C06;&#x5F53;&#x524D;watcher&#x5B58;&#x8D77;&#x6765; 2.&#x8C03;&#x7528;render&#x51FD;&#x6570; 3. &#x8C03;&#x7528;popTarget&#x51FD;&#x6570;&#x5C06;&#x5F53;&#x524D;watcher&#x5220;&#x6389;</li>
-<li>&#x5728;&#x8C03;&#x7528;render&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x4E0A;&#x53D6;&#x503C;&#xFF0C;&#x53D6;&#x503C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;Object.defineProperty&#x4E2D;&#x7684;get,&#x5185;&#x90E8;&#x4F1A;&#x6536;&#x96C6;&#x4F9D;&#x8D56;&#xFF0C;&#x8FDB;&#x884C;dep/watcher&#x7684;&#x53CC;&#x5411;&#x5173;&#x8054;,&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x771F;&#x5B9E;&#x7684;&#x503C;&#xFF0C;&#x63A5;&#x7740;&#x5185;&#x90E8;&#x4F1A;&#x5148;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x65B0;&#x9875;&#x9762;</li>
-<li>&#x8C03;&#x7528;mounted&#x94A9;&#x5B50;&#x51FD;&#x6570;</li>
-</ol>
-</blockquote>
-<p>beforeUpdate/updated:</p>
-<blockquote>
-<ol>
-<li>&#x5F53;&#x5916;&#x754C;&#x66F4;&#x65B0;data&#x4E2D;&#x7684;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;set&#xFF0C;&#x56E0;&#x4E3A;&#x4E4B;&#x524D;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#x6536;&#x96C6;&#x4E86;&#x4F9D;&#x8D56;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4F1A;&#x901A;&#x77E5;watcher&#x53BB;&#x66F4;&#x65B0;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6B21;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x8282;&#x70B9;&#xFF0C;&#x8FD9;&#x4E00;&#x6B21;&#x521B;&#x5EFA;&#x7684;&#x865A;&#x62DF;&#x8282;&#x70B9;&#x4F1A;&#x548C;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7684;&#x865A;&#x62DF;&#x8282;&#x70B9;&#x8FDB;&#x884C;diff&#x5BF9;&#x6BD4;&#xFF0C;&#x7136;&#x540E;&#x5C40;&#x90E8;&#x66F4;&#x65B0;&#x9875;&#x9762;</li>
-<li>&#x5728;&#x5C40;&#x90E8;&#x66F4;&#x65B0;&#x9875;&#x9762;&#x4E4B;&#x524D;&#x8C03;&#x7528;beforeUpdate&#x94A9;&#x5B50;&#x51FD;&#x6570;</li>
-<li>&#x5728;&#x5C40;&#x90E8;&#x66F4;&#x65B0;&#x9875;&#x9762;&#x4E4B;&#x540E;&#x8C03;&#x7528;updated&#x94A9;&#x5B50;&#x51FD;&#x6570;</li>
-</ol>
-</blockquote>
-<p>beforeDestroy/destroyed:</p>
-<blockquote>
-<ol>
-<li>&#x5F53;&#x7EC4;&#x4EF6;&#x88AB;&#x5378;&#x8F7D;&#x65F6;&#xFF0C;&#x4F1A;&#x6E05;&#x7A7A;&#x7EC4;&#x4EF6;&#x4E2D;&#x7ED1;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x7236;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684; children&#x4E2D;&#x79FB;&#x9664;&#x81EA;&#x5DF1;&#xFF0C;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x4E2D;&#x79FB;&#x9664;children&#x4E2D;&#x79FB;&#x9664;&#x81EA;&#x5DF1;&#xFF0C;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x4E2D;&#x79FB;&#x9664;children&#x4E2D;&#x79FB;&#x9664;&#x81EA;&#x5DF1;&#xFF0C;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x4E2D;&#x79FB;&#x9664;parent,&#x6E05;&#x7A7A;watcher&#x7B49;&#x7B49;...</li>
-<li>&#x5F53;&#x7EC4;&#x4EF6;&#x88AB;&#x5378;&#x8F7D;&#x524D;&#x8C03;&#x7528;beforeDestroy&#x94A9;&#x5B50;&#x51FD;&#x6570;</li>
-<li>&#x5F53;&#x7EC4;&#x4EF6;&#x88AB;&#x5378;&#x8F7D;&#x540E;&#x8C03;&#x7528;destroyed&#x94A9;&#x5B50;&#x51FD;&#x6570;</li>
-</ol>
-</blockquote>
 
                                 
                                 </section>
@@ -822,7 +764,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"VUE的生命周期","level":"1.6.2","depth":2,"next":{"title":"组件的通信","level":"1.6.3","depth":2,"path":"5_vue/组件的通信.md","ref":"5_vue/组件的通信.md","articles":[]},"previous":{"title":"VUE的理解和MVVM框架","level":"1.6.1","depth":2,"path":"5_vue/VUE的理解和MVVM框架.md","ref":"5_vue/VUE的理解和MVVM框架.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_vue/VUE的生命周期.md","mtime":"2021-11-04T16:17:35.117Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-05T09:30:29.241Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"VUE的生命周期","level":"1.6.2","depth":2,"next":{"title":"组件的通信","level":"1.6.3","depth":2,"path":"5_vue/组件的通信.md","ref":"5_vue/组件的通信.md","articles":[]},"previous":{"title":"VUE的理解和MVVM框架","level":"1.6.1","depth":2,"path":"5_vue/VUE的理解和MVVM框架.md","ref":"5_vue/VUE的理解和MVVM框架.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_vue/VUE的生命周期.md","mtime":"2021-11-17T14:04:28.916Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-21T14:28:59.379Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
