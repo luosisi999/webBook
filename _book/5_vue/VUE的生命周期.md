@@ -21,3 +21,8 @@ DOM渲染在mounted这个周 期就已经完成
 | updabeforeDestoryted | 组件销毁之前调用 | 销毁定时器、解绑全局事件、销毁插件对象删除提示 |
 | destroyed | 组件销毁之后调用，对data的改变不会再触发周期函数，vue实例已解除事件监听和DOM绑定，但DOM结构依然存在 | - |
 
+### 父子组件生命周期执行流程
+一个完整的父子组件生命周期：
+
+父beforeCreate -> 父created -> 父beforeMount -> 子beforeCreate -> 子created -> 子beforeMount -> 子mounted -> 父mounted->父beforeUpdate->子beforeUpdate->子updated->父updated->父beforeDestroy->子beforeDestroy->子destroyed->父destroyed
+
