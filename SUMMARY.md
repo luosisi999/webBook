@@ -24,7 +24,7 @@
     * [虚拟dom和diff算法](5_vue/虚拟dom和diff算法.md)
     * [vue和angular的区别](5_vue/vue和angular的区别.md)
     * [nextTick](5_vue/nextTick.md) 
-    * [keep-alive](keep-alive.md)
+    * [keep-alive](5_vue/keep-alive.md)
     * [vue3](5_vue/README.md)
     * [vuex](5_vue/vuex.md)
     * [vue其他知识汇总](5_vue/vue其他知识汇总.md)
