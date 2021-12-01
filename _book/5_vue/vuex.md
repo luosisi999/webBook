@@ -15,7 +15,6 @@ Vuex状态管理跟使用传统全局变量的不同之处：
 2. 创建仓库Store并在目录下面创建index.js文件
 3. 在index.js里面引用vuex
 ```
-
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
@@ -47,12 +46,11 @@ export default new Vuex.Store({
   getters,
   actions
 })
-
-
 ```
 ![e3cb464ba534c19078d4fcef40b77fe1.png](../Images/vuex.png)
 
 Vuex的作用类似全局对象，Vuex 使用单一状态树，用一个对象State包含了整个应用层级的所有状态，你可以理解为这些状态就是一堆全局变量和数据。
+
 ```
 export default {
 methods:{
