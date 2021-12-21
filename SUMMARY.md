@@ -5,6 +5,8 @@
     * [操作系统](2_basis/操作系统.md)
     * [计算机网络](2_basis/计算机网络.md)
     * [数据结构与算法](2_basis/数据结构与算法.md)
+    * [linux](9_linux/linux.md)
+    * [数据库](10数据库/数据库.md)
     * [JAVA](2_basis/JAVA.md)
 * [HTTP/HTTPS/浏览器](3_http/README.md)
     * [HTTP](3_http/HTTP.md)
