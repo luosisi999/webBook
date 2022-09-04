@@ -1,2 +1,6 @@
 1. gitbook serve :启动http://localhost:4000 生成_book文件，
 2. 将_book的文件复制到gh-pages分支里面，push到github上面。
+_book不用加入git
+注意：
+文件名不要随便更改，否则git会默认删除，就很崩溃了
+_book中生成的md和html文件加入到gh-pages中要记得Git add

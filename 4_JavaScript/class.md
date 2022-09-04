@@ -1,5 +1,5 @@
 在面字节的时候用到了class的写法，当时有点蒙，后来学习了一下class。
-### 写一个框架
+# 写一个框架
 ```
 
 class App{
@@ -31,7 +31,8 @@ app.run();
 //当调用run的时候才打印1,2,3
 
 ```
-### 一、Class的基本语法
+
+# 一、Class的基本语法
 **1. 基本写法**
 ```
 class App{
@@ -55,11 +56,13 @@ function App(){
 }
 //其中use和run都是相当于在app.prototype上添加的。
 ```
+
 **2. 类的实例**
 ```
 var app= App()//错误
 var app =new App()//正确
 ```
+
 **3. 注意点**
 - 类和模块的内部，默认就是严格模式，所以不需要使用use strict指定运行模式
 - 类不存在提升
@@ -69,9 +72,12 @@ class Point {}
 Point.name// "Point"
 // name属性总是返回紧跟在class关键字后面的类名。
 ```
+
 - Generator 方法  
 某个方法之前加上星号（*），就表示该方法是一个 Generator 函数。
+
 **4. 静态方法**
+
 类相当于实例的原型，所有类中的方法都 可以被实例继承，如果在方法前面加上static则不被实例继承。
 ```
 
@@ -84,7 +90,7 @@ Foo.classMethod() // 'hello'
 var foo = new Foo();
 foo.classMethod()// TypeError: foo.classMethod is not a function
 ```
-注意，如果是静态方法中的this指的是类本身，而不是实例。
+注意，如果是静态方法中的this指的是类本身，而不是实例。<br>
 如果是非静态方法则指的是实例。
 
 **5. 实例属性的新写法**
@@ -139,7 +145,9 @@ class Foo{
 }
 ```
 新写法是显式声明（declarative），而不是赋值处理，语义更好。
+
 **7. 私有方法和私有属性**
+
 一种做法是在命名上加以区别。
 ```
 
@@ -157,6 +165,7 @@ class Widget {
 ```
 
 私有属性的提案
+
 方法是在属性名之前，使用#表示。
 ```
 class IncreasingCounter {
@@ -171,7 +180,8 @@ class IncreasingCounter {
 }
 ```
 \#count就是私有属性，只能在类的内部使用（this.#count）。如果在类的外部使用，就会报错。
-### 二、Class的继承
+
+# 二、Class的继承
 
 **1. 简介**
 
@@ -198,7 +208,7 @@ Object.getPrototypeOf方法可以用来从子类上获取父类。
 Object.getPrototypeOf(ColorPoint) === Point
 // true
 ```
-3. super 关键字
+**3. super 关键字**
 super这个关键字，既可以当作函数使用，也可以当作对象使用
 **第一种情况**，super作为函数调用时，代表父类的构造函数。
 ES6 要求，子类的构造函数必须执行一次super函数。
@@ -214,11 +224,26 @@ class B extends A {
 **第二种情况，super作为对象使用。**
 super作为对象时，在普通方法中，指向父类的原型对象；在静态方法中，指向父类。
 ```
-class A {p() {return 2;}}class B extends A {constructor() {super();console.log(super.p()); // 2}}let b = new B();
+class A {
+    p() {
+        return 2;
+        }
+    }
+class B extends A {
+    constructor() {
+        super();
+        console.log(super.p());// 2
+        }
+    }
+    let b = new B();
 ```
-4. 类的 prototype 属性和proto属性
+
+**4. 类的 prototype 属性和proto属性**
+
 （1）子类的__proto__属性，表示构造函数的继承，总是指向父类。
+
 （2）子类prototype属性的__proto__属性，表示方法的继承，总是指向父类的prototype属性。
+
 ```
 
 class A {
@@ -227,8 +252,9 @@ class B extends A {}
 B.__proto__ === A // true
 B.prototype.__proto__ === A.prototype // true
 ```
-5. 原生构造函数的继承
-6. Mixin 模式的实现
+**5. 原生构造函数的继承**
+
+**6. Mixin 模式的实现**
 
 Mixin 指的是多个对象合成一个新的对象，新对象具有各个组成成员的接口。它的最简单实现如下。
 ```
