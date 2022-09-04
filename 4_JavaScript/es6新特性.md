@@ -492,9 +492,8 @@ foo // undefined
 // 报错
 let {foo: {bar}} = {baz: 'baz'};
 ```
-```
 上面代码中，等号左边对象的foo属性，对应一个子对象。该子对象的bar属性，解构时会报错。原因很简单，因为foo这时等于undefined，再取子属性就会报错，请看下面的代码
-```
+
 7.给一个已经声明的变量再次声明时，要注意。
 ```
 // 错误的写法
@@ -689,7 +688,7 @@ console.log(aa.next())
 ```
 
 ### ES6的生成器-generator
-//generator函数，可以通过关键字，yield关键字，将函数挂起
+//generator函数，可以通过关键字，yield关键字，将函数挂起<br>
 和普通函数的区别：
 1.function后面有个*。
 2.yield只能在函数内部使用，让函数挂起	
@@ -809,14 +808,13 @@ const p = Promise.race([
   })
 ]);
 
-p
-.then(console.log)
+p.then(console.log)
 .catch(console.error);
 ```
 上面代码中，如果 5 秒之内fetch方法无法返回结果，变量p的状态就会变为rejected，从而触发catch方法指定的回调函数。
 
 #### Promise.allSettled()
-Promise.allSettled()方法接受一个数组作为参数，数组的每个成员都是一个 Promise 对象，并返回一个新的 Promise 对象。只有等到参数数组的所有 Promise 对象都发生状态变更（不管是fulfilled还是rejected），返回的 Promise 对象才会发生状态变更。
+Promise.allSettled()方法接受一个数组作为参数，数组的每个成员都是一个 Promise 对象，并返回一个新的<>br Promise 对象。只有等到参数数组的所有 Promise 对象都发生状态变更（不管是fulfilled还是rejected），返回的 Promise 对象才会发生状态变更。
 #### Promise.any()
 只要参数实例有一个变成fulfilled状态，包装实例就会变成fulfilled状态；如果所有参数实例都变成rejected状态，包装实例就会变成rejected状态。
 ```
