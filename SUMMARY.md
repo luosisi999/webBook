@@ -23,6 +23,8 @@
 * [VUE](5_vue/README.md)
     * [VUE的理解和MVVM框架](5_vue/VUE的理解和MVVM框架.md) 
     * [VUE的生命周期](5_vue/VUE的生命周期.md)
+    * [VUE的基础（全）](5_vue/vue基础(全).md)
+    * [vue组件(全)](5_vue/vue组件(全).md)
     * [组件的通信](5_vue/组件的通信.md)
     * [vue路由](5_vue/Vue-router.md)
     * [虚拟dom和diff算法](5_vue/虚拟dom和diff算法.md)
