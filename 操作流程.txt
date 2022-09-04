@@ -1,2 +1,0 @@
-1. gitbook serve :启动http://localhost:4000 生成_book文件，
-2. 将_book的文件复制到gh-pages分支里面，push到github上面。
