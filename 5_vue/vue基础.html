@@ -1016,7 +1016,7 @@ new Vue({
 <li><p>unbind: &#x53EA;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#xFF0C; &#x6307;&#x4EE4;&#x4E0E;&#x5143;&#x7D20;&#x89E3;&#x7ED1;&#x65F6;&#x8C03;&#x7528;&#x3002;</p>
 </li>
 </ul>
-<h1 id="11-vuejs-&#x8DEF;&#x7531;">11 vue.js &#x8DEF;&#x7531;</h1>
+<h1 id="11-vuejs-&#x8DEF;&#x7531;&#xFF08;&#x89C1;vue-router&#x7CBE;&#x8BB2;&#xFF09;">11 vue.js &#x8DEF;&#x7531;&#xFF08;&#x89C1;vue-router&#x7CBE;&#x8BB2;&#xFF09;</h1>
 <pre><code>// 0. &#x5982;&#x679C;&#x4F7F;&#x7528;&#x6A21;&#x5757;&#x5316;&#x673A;&#x5236;&#x7F16;&#x7A0B;&#xFF0C;&#x5BFC;&#x5165; Vue &#x548C; VueRouter&#xFF0C;&#x8981;&#x8C03;&#x7528; Vue.use(VueRouter)
 
 // 1. &#x5B9A;&#x4E49;&#xFF08;&#x8DEF;&#x7531;&#xFF09;&#x7EC4;&#x4EF6;&#x3002;
@@ -1229,6 +1229,53 @@ axios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/x-www-
   &lt;component v-bind:is=&quot;currentTabComponent&quot;&gt;&lt;/component&gt;
 &lt;/keep-alive&gt;
 </code></pre><p>&#x5728;&#x5207;&#x6362;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x80FD;&#x591F;&#x7F13;&#x5B58;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x9500;&#x6BC1;&#x3002;</p>
+<h2 id="&#x5BF9;&#x4E8E;keep-alive&#x7684;&#x7406;&#x89E3;&#xFF0C;&#x4ED6;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5177;&#x4F53;&#x7F13;&#x5B58;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">&#x5BF9;&#x4E8E;keep-alive&#x7684;&#x7406;&#x89E3;&#xFF0C;&#x4ED6;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5177;&#x4F53;&#x7F13;&#x5B58;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2>
+<p>keep-alive&#x662F;vue&#x5185;&#x7F6E;&#x7684;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x80FD;&#x591F;&#x7F13;&#x5B58;&#x4E0D;&#x6D3B;&#x52A8;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7EC4;&#x4EF6;&#x8FDB;&#x884C;&#x5207;&#x6362;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x8FDB;&#x884C;&#x9500;&#x6BC1;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x9700;&#x6C42;&#xFF0C;&#x67D0;&#x4E2A;&#x7EC4;&#x4EF6;&#x5207;&#x6362;&#x540E;&#x4E0D;&#x8FDB;&#x884C;&#x9500;&#x6BC1;&#xFF0C;&#x800C;&#x662F;&#x4FDD;&#x5B58;&#x4E4B;&#x524D;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x5229;&#x7528;keep-alive&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>keep-alive&#x662F;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E0D;&#x4F1A;&#x6E32;&#x67D3;&#x6210;&#x771F;&#x6B63;&#x7684;dom&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF1A;&#x67E5;&#x770B;&#x4E00;&#x4E2A;&#x641C;&#x7D22;&#x9875;&#x9762;&#x7684;&#x8BE6;&#x60C5;&#xFF0C;&#x518D;&#x8FD4;&#x56DE;&#x770B;&#x8FD9;&#x4E2A;&#x641C;&#x7D22;&#x5217;&#x8868;&#x7684;&#x65F6;&#x5019;&#x3002;</p>
+<p>&#x4E00;&#x3001;.&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;
+&#x88AB;&#x5305;&#x542B;&#x5728; <keep-alive> &#x4E2D;&#x521B;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x4F1A;&#x591A;&#x51FA;&#x4E24;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x94A9;&#x5B50;: activated &#x4E0E; deactivated</keep-alive></p>
+<ul>
+<li><p>activated
+&#x5728;&#x7EC4;&#x4EF6;&#x88AB;&#x6FC0;&#x6D3B;&#x65F6;&#x8C03;&#x7528;&#xFF0C;&#x5728;&#x7EC4;&#x4EF6;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x65F6;&#x4E5F;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x4E4B;&#x540E;&#x6BCF;&#x6B21;keep-alive&#x6FC0;&#x6D3B;&#x65F6;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
+</li>
+<li><p>deactivated
+&#x5728;&#x7EC4;&#x4EF6;&#x88AB;&#x505C;&#x7528;&#x65F6;&#x8C03;&#x7528;</p>
+</li>
+</ul>
+<p>&#x4E8C;. &#x5728;keep-alive&#x4E0A;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x4EE5;&#x53CA;&#x914D;&#x5408;router-view&#x4F7F;&#x7528;</p>
+<p>&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;include - &#x5B57;&#x7B26;&#x4E32;&#x6216;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#xFF0C;&#x53EA;&#x6709;&#x5339;&#x914D;&#x7684;&#x7EC4;&#x4EF6;&#x4F1A;&#x88AB;&#x7F13;&#x5B58;exclude - &#x5B57;&#x7B26;&#x4E32;&#x6216;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4EFB;&#x4F55;&#x5339;&#x914D;&#x7684;&#x7EC4;&#x4EF6;&#x90FD;&#x4E0D;&#x4F1A;&#x88AB;&#x7F13;&#x5B58;</p>
+<pre><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;div id=&quot;nav&quot;&gt;
+      &lt;router-link to=&quot;/&quot;&gt;Home&lt;/router-link&gt; |
+      &lt;router-link to=&quot;/about&quot;&gt;About&lt;/router-link&gt;
+    &lt;/div&gt;
+    &lt;keep-alive&gt;
+      &lt;router-view /&gt;
+    &lt;/keep-alive&gt;
+
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre><p>&#x8FD9;&#x65F6;&#x9ED8;&#x8BA4;&#x662F;home&#x548C;about&#x7EC4;&#x4EF6;&#x90FD;&#x7F13;&#x5B58;&#x4E86;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;include.</p>
+<pre><code>&lt;keep-alive include=&quot;home&quot;&gt;
+   &lt;router-view /&gt;
+&lt;/keep-alive&gt;
+</code></pre><p>&#x6B64;&#x5916;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8DEF;&#x7531;&#x4E2D;&#x7684;meta&#x5C5E;&#x6027;</p>
+<pre><code>{
+      path: &apos;/&apos;,
+      name: &apos;home&apos;,
+      meta:{
+        keepAlive:true
+      },
+      component: Home
+    }
+</code></pre><p>&#x4E09;&#x3001;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;</p>
+<ul>
+<li><keep-alive> &#x5148;&#x5339;&#x914D;&#x88AB;&#x5305;&#x542B;&#x7EC4;&#x4EF6;&#x7684; name &#x5B57;&#x6BB5;&#xFF0C;&#x5982;&#x679C; name &#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5219;&#x5339;&#x914D;&#x5F53;&#x524D;&#x7EC4;&#x4EF6; componetns &#x914D;&#x7F6E;&#x4E2D;&#x7684;&#x6CE8;&#x518C;&#x540D;&#x79F0;&#x3002;</keep-alive></li>
+<li>&#x5F53;&#x5339;&#x914D;&#x6761;&#x4EF6;&#x540C;&#x65F6;&#x5728; include &#x4E0E; exclude &#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x4EE5; exclude &#x4F18;&#x5148;&#x7EA7;&#x6700;&#x9AD8;(&#x5F53;&#x524D;vue 2.4.2 version)&#x3002;&#x6BD4;&#x5982;&#xFF1A;&#x5305;&#x542B;&#x4E8E;&#x6392;&#x9664;&#x540C;&#x65F6;&#x5339;&#x914D;&#x5230;&#x4E86;&#x7EC4;&#x4EF6;A&#xFF0C;&#x90A3;&#x7EC4;&#x4EF6;A&#x4E0D;&#x4F1A;&#x88AB;&#x7F13;&#x5B58;&#x3002;</li>
+<li>&#x5305;&#x542B;&#x5728; <keep-alive> &#x4E2D;&#xFF0C;&#x4F46;&#x7B26;&#x5408; exclude &#xFF0C;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;activated &#x548C; deactivated&#x3002;</keep-alive></li>
+</ul>
 
                                 
                                 </section>
@@ -1272,7 +1319,7 @@ axios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/x-www-
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"VUE的基础（全）","level":"1.8.3","depth":2,"next":{"title":"vue组件（全）","level":"1.8.4","depth":2,"path":"5_vue/vue组件.md","ref":"5_vue/vue组件.md","articles":[]},"previous":{"title":"VUE的生命周期","level":"1.8.2","depth":2,"path":"5_vue/VUE的生命周期.md","ref":"5_vue/VUE的生命周期.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_vue/vue基础.md","mtime":"2022-09-04T11:27:32.468Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-04T11:27:39.220Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"VUE的基础（全）","level":"1.8.3","depth":2,"next":{"title":"vue组件（全）","level":"1.8.4","depth":2,"path":"5_vue/vue组件.md","ref":"5_vue/vue组件.md","articles":[]},"previous":{"title":"VUE的生命周期","level":"1.8.2","depth":2,"path":"5_vue/VUE的生命周期.md","ref":"5_vue/VUE的生命周期.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_vue/vue基础.md","mtime":"2022-09-04T13:04:44.456Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-04T13:13:55.493Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
