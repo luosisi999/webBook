@@ -1,0 +1,1463 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Vue3新特性 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="虚拟dom和diff算法.html" />
+    
+    
+    <link rel="prev" href="Vue-router.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../readme.html">
+            
+                <a href="../readme.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_basis/">
+            
+                <a href="../2_basis/">
+            
+                    
+                    计算机基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_basis/操作系统.html">
+            
+                <a href="../2_basis/操作系统.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_basis/计算机网络.html">
+            
+                <a href="../2_basis/计算机网络.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_basis/数据结构与算法.html">
+            
+                <a href="../2_basis/数据结构与算法.html">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../9_linux/linux.html">
+            
+                <a href="../9_linux/linux.html">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../10数据库/数据库.html">
+            
+                <a href="../10数据库/数据库.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../2_basis/JAVA.html">
+            
+                <a href="../2_basis/JAVA.html">
+            
+                    
+                    JAVA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../8_procedure/biancheng.html">
+            
+                <a href="../8_procedure/biancheng.html">
+            
+                    
+                    编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_http/">
+            
+                <a href="../3_http/">
+            
+                    
+                    HTTP/HTTPS/浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_http/HTTP.html">
+            
+                <a href="../3_http/HTTP.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_http/HTTPS.html">
+            
+                <a href="../3_http/HTTPS.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3_http/浏览器.html">
+            
+                <a href="../3_http/浏览器.html">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../6_html/html.html">
+            
+                <a href="../6_html/html.html">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../7_css/css.html">
+            
+                <a href="../7_css/css.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../4_JavaScript/">
+            
+                <a href="../4_JavaScript/">
+            
+                    
+                    JavaScript/ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../4_JavaScript/JavaScript.html">
+            
+                <a href="../4_JavaScript/JavaScript.html">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../4_JavaScript/ES6新特性.html">
+            
+                <a href="../4_JavaScript/ES6新特性.html">
+            
+                    
+                    ES6新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../4_JavaScript/ES6总结.html">
+            
+                <a href="../4_JavaScript/ES6总结.html">
+            
+                    
+                    ES6总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../4_JavaScript/class.html">
+            
+                <a href="../4_JavaScript/class.html">
+            
+                    
+                    Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    VUE
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="VUE的理解和MVVM框架.html">
+            
+                <a href="VUE的理解和MVVM框架.html">
+            
+                    
+                    VUE的理解和MVVM框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="VUE的生命周期.html">
+            
+                <a href="VUE的生命周期.html">
+            
+                    
+                    VUE的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="vue基础.html">
+            
+                <a href="vue基础.html">
+            
+                    
+                    VUE的基础（全）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="vue组件.html">
+            
+                <a href="vue组件.html">
+            
+                    
+                    vue组件（全）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="组件的通信.html">
+            
+                <a href="组件的通信.html">
+            
+                    
+                    组件的通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="Vue-router.html">
+            
+                <a href="Vue-router.html">
+            
+                    
+                    Vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.7" data-path="vue3新特性.html">
+            
+                <a href="vue3新特性.html">
+            
+                    
+                    Vue3新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="虚拟dom和diff算法.html">
+            
+                <a href="虚拟dom和diff算法.html">
+            
+                    
+                    虚拟dom和diff算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="vue和angular的区别.html">
+            
+                <a href="vue和angular的区别.html">
+            
+                    
+                    vue和angular的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="nextTick.html">
+            
+                <a href="nextTick.html">
+            
+                    
+                    nextTick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="keep-alive.html">
+            
+                <a href="keep-alive.html">
+            
+                    
+                    keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="vuex.html">
+            
+                <a href="vuex.html">
+            
+                    
+                    vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="vue其他知识汇总.html">
+            
+                <a href="vue其他知识汇总.html">
+            
+                    
+                    vue其他知识汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Webpack
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../11_webpack/base/base.html">
+            
+                <a href="../11_webpack/base/base.html">
+            
+                    
+                    Webpack基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../8_procedure/">
+            
+                <a href="../8_procedure/">
+            
+                    
+                    来编个程序吧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../8_procedure/闭包实现单例模式.html">
+            
+                <a href="../8_procedure/闭包实现单例模式.html">
+            
+                    
+                    闭包实现单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../8_procedure/二叉树路径总和.html">
+            
+                <a href="../8_procedure/二叉树路径总和.html">
+            
+                    
+                    二叉树路径总和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../8_procedure/二分查找.html">
+            
+                <a href="../8_procedure/二分查找.html">
+            
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../8_procedure/防抖和节流.html">
+            
+                <a href="../8_procedure/防抖和节流.html">
+            
+                    
+                    防抖和节流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../8_procedure/归并&快速排序.html">
+            
+                <a href="../8_procedure/归并&快速排序.html">
+            
+                    
+                    归并&快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../8_procedure/金钱格式化.html">
+            
+                <a href="../8_procedure/金钱格式化.html">
+            
+                    
+                    金钱格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../8_procedure/全排列.html">
+            
+                <a href="../8_procedure/全排列.html">
+            
+                    
+                    全排列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../8_procedure/实现set.html">
+            
+                <a href="../8_procedure/实现set.html">
+            
+                    
+                    实现set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../8_procedure/数组去重.html">
+            
+                <a href="../8_procedure/数组去重.html">
+            
+                    
+                    数组去重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../8_procedure/N数之和.html">
+            
+                <a href="../8_procedure/N数之和.html">
+            
+                    
+                    N数之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../8_procedure/promise相关.html">
+            
+                <a href="../8_procedure/promise相关.html">
+            
+                    
+                    promise相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../8_procedure/二叉树的最小深度.html">
+            
+                <a href="../8_procedure/二叉树的最小深度.html">
+            
+                    
+                    二叉树的最小深度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Vue3新特性</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><code>vue3</code>&#x65B0;&#x589E;&#x4E86;&#x5F88;&#x591A;&#x65B0;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x76EE;&#x524D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &#x5B89;&#x88C5;<code>vue-compisition-api</code>&#x5305;&#x8FDB;&#x884C;&#x5C1D;&#x9C9C;&#xFF0C;vue3&#x5C06;&#x4F1A;&#x5BF9;vue2&#x8FDB;&#x884C;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x5FC5;&#x62C5;&#x5FC3;&#x56E0;&#x4E3A;&#x4F7F;&#x7528;vue3 &#x540E; vue2&#x7684;&#x7279;&#x6027;&#x4E0D;&#x80FD;&#x591F;&#x4F7F;&#x7528;</p>
+<h2 id="&#x5B89;&#x88C5;&#x5305;&#x3001;&#x4F7F;&#x7528;&#x5305;">&#x5B89;&#x88C5;&#x5305;&#x3001;&#x4F7F;&#x7528;&#x5305;</h2>
+<pre><code>npm install @vue/composition-api --save
+
+import VueCompositionApi from &apos;@vue/composition-api&apos;
+Vue.use(VueCompositionApi)
+</code></pre><h2 id="1setup">1.setup</h2>
+<p><code>setup()</code> &#x51FD;&#x6570;&#x662F; vue3 &#x4E2D;&#xFF0C;&#x4E13;&#x95E8;&#x4E3A;&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B;&#x7684;&#x65B0;&#x5C5E;&#x6027;&#x3002;&#x5B83;&#x4E3A;&#x6211;&#x4EEC;&#x4F7F;&#x7528; vue3 &#x7684; Composition API &#x65B0;&#x7279;&#x6027;&#x63D0;&#x4F9B;&#x4E86;&#x7EDF;&#x4E00;&#x7684;&#x5165;&#x53E3;&#x3002;</p>
+<h3 id="11-&#x6267;&#x884C;&#x65F6;&#x673A;">1.1 &#x6267;&#x884C;&#x65F6;&#x673A;</h3>
+<p><code>setup</code> &#x51FD;&#x6570;&#x4F1A;&#x5728; <code>beforeCreate</code> &#x4E4B;&#x540E;&#x3001;<code>created</code> &#x4E4B;&#x524D;&#x6267;&#x884C;!!!</p>
+<h3 id="12-&#x63A5;&#x6536;-props-&#x6570;&#x636E;">1.2 &#x63A5;&#x6536; props &#x6570;&#x636E;</h3>
+<p>&#x5728;<code>props</code> &#x4E2D;&#x5B9A;&#x4E49;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x5141;&#x8BB8;&#x5916;&#x754C;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x53C2;&#x6570;&#x540D;&#x79F0;&#xFF1A;<code>props: { p1: String }</code>&#x3001;
+&#xB7;
+&#x901A;&#x8FC7;<code>setup</code> &#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5F62;&#x53C2;&#xFF0C;&#x63A5;&#x6536; props &#x6570;&#x636E;&#xFF1A;<code>setup(props) { console.log(props.p1) }</code></p>
+<h3 id="13-context">1.3 context</h3>
+<p><code>setup</code> &#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x5F62;&#x53C2;&#x662F;&#x4E00;&#x4E2A;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x5728; <code>vue 2.x</code> &#x4E2D;&#x9700;&#x8981;&#x901A;&#x8FC7; <code>this</code> &#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x5230;&#xFF0C;&#x5728; vue 3.x &#x4E2D;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>const MyComponent = {
+  setup(props, context) {
+    context.attrs
+    context.slots
+    context.parent
+    context.root
+    context.emit
+    context.refs
+  }
+}
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;&#x5728; <code>setup()</code> &#x51FD;&#x6570;&#x4E2D;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x5230;<code>this</code> !!!!!!!!!!!!!</p>
+<h2 id="2reactive">2.reactive</h2>
+<p><code>reactive()</code>&#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="21&#x57FA;&#x672C;&#x8BED;&#x6CD5;">2.1&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h3>
+<p>&#x7B49;&#x4EF7;&#x4E8E; vue 2.x &#x4E2D;&#x7684; <code>Vue.observable()</code>&#x51FD;&#x6570;&#xFF0C;vue 3.x &#x4E2D;&#x63D0;&#x4F9B;&#x4E86;<code>reactive()</code> &#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#xFF0C;&#x57FA;&#x672C;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>import { reactive } from &apos;@vue/composition-api&apos;
+// &#x521B;&#x5EFA;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#xFF0C;&#x5F97;&#x5230;&#x7684; state &#x7C7B;&#x4F3C;&#x4E8E; vue 2.x &#x4E2D; data() &#x8FD4;&#x56DE;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x5BF9;&#x8C61;
+const state = reactive({ count: 0 })
+</code></pre><h3 id="22-&#x5B9A;&#x4E49;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x4F9B;-template-&#x4F7F;&#x7528;">2.2 &#x5B9A;&#x4E49;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x4F9B; template &#x4F7F;&#x7528;</h3>
+<p>&#x6309;&#x9700;&#x5BFC;&#x5165; reactive &#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code>import { reactive } from &apos;@vue/composition-api&apos;
+</code></pre><p>&#x5728;<code>setup()</code>&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528; <code>reactive()</code> &#x51FD;&#x6570;&#xFF0C;&#x521B;&#x5EFA;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code>setup() {
+     // &#x521B;&#x5EFA;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x5BF9;&#x8C61;
+    const state = reactive({count: 0})
+
+     // setup &#x51FD;&#x6570;&#x4E2D;&#x5C06;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x5BF9;&#x8C61; return &#x51FA;&#x53BB;&#xFF0C;&#x4F9B; template &#x4F7F;&#x7528;
+    return state
+}
+</code></pre><p>&#x5728; template &#x4E2D;&#x8BBF;&#x95EE;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>&lt;p&gt;&#x5F53;&#x524D;&#x7684; count &#x503C;&#x4E3A;&#xFF1A;&lt;/p&gt;
+</code></pre><h1 id="vue3&#x65B0;&#x7279;&#x6027;">Vue3&#x65B0;&#x7279;&#x6027;</h1>
+<h2 id="3-ref">3. ref</h2>
+<h3 id="31&#x57FA;&#x672C;&#x8BED;&#x6CD5;">3.1&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h3>
+<p><code>ref()</code> &#x51FD;&#x6570;&#x7528;&#x6765;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#xFF0C;<code>ref()</code> &#x51FD;&#x6570;&#x8C03;&#x7528;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0A;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;<code>.value</code>&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code>import { ref } from &apos;@vue/composition-api&apos;
+
+
+// &#x521B;&#x5EFA;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x5BF9;&#x8C61; count&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x4E3A; 0
+const count = ref(0)
+
+// &#x5982;&#x679C;&#x8981;&#x8BBF;&#x95EE; ref() &#x521B;&#x5EFA;&#x51FA;&#x6765;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x7684;&#x503C;&#xFF0C;&#x5FC5;&#x987B;&#x901A;&#x8FC7; .value &#x5C5E;&#x6027;&#x624D;&#x53EF;&#x4EE5;
+console.log(count.value) // &#x8F93;&#x51FA; 0
+// &#x8BA9; count &#x7684;&#x503C; +1
+count.value++
+// &#x518D;&#x6B21;&#x6253;&#x5370; count &#x7684;&#x503C;
+console.log(count.value) // &#x8F93;&#x51FA; 1
+</code></pre><h3 id="32-&#x5728;-template-&#x4E2D;&#x8BBF;&#x95EE;-ref-&#x521B;&#x5EFA;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;">3.2 &#x5728; template &#x4E2D;&#x8BBF;&#x95EE; ref &#x521B;&#x5EFA;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;</h3>
+<p>&#x5728; <code>setup()</code> &#x4E2D;&#x521B;&#x5EFA;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>import { ref } from &apos;@vue/composition-api&apos;
+
+setup() {
+    const count = ref(0)
+
+     return {
+         count,
+         name: ref(&apos;zs&apos;)
+     }
+}
+</code></pre><p>&#x5728; <code>template</code> &#x4E2D;&#x8BBF;&#x95EE;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>&lt;template&gt;
+  &lt;p&gt; --- &lt;/p&gt;
+&lt;/template&gt;
+</code></pre><h3 id="33-&#x5728;-reactive-&#x5BF9;&#x8C61;&#x4E2D;&#x8BBF;&#x95EE;-ref-&#x521B;&#x5EFA;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;">3.3 &#x5728; reactive &#x5BF9;&#x8C61;&#x4E2D;&#x8BBF;&#x95EE; ref &#x521B;&#x5EFA;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;</h3>
+<p>&#x5F53;&#x628A;<code>ref()</code>&#x521B;&#x5EFA;&#x51FA;&#x6765;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#xFF0C;&#x6302;&#x8F7D;&#x5230; <code>reactive()</code>&#x4E0A;&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x628A;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x4E3A;&#x539F;&#x59CB;&#x7684;&#x503C;&#xFF0C;&#x4E0D;&#x9700;&#x901A;&#x8FC7;<code>.value</code> &#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x88AB;&#x8BBF;&#x95EE;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>const count = ref(0)
+const state = reactive({
+  count
+})
+
+console.log(state.count) // &#x8F93;&#x51FA; 0
+state.count++ // &#x6B64;&#x5904;&#x4E0D;&#x9700;&#x8981;&#x901A;&#x8FC7; .value &#x5C31;&#x80FD;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x539F;&#x59CB;&#x503C;
+console.log(count) // &#x8F93;&#x51FA; 1
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;&#x65B0;&#x7684; <code>ref</code> &#x4F1A;&#x8986;&#x76D6;&#x65E7;&#x7684; <code>ref</code>&#xFF0C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>// &#x521B;&#x5EFA; ref &#x5E76;&#x6302;&#x8F7D;&#x5230; reactive &#x4E2D;
+const c1 = ref(0)
+const state = reactive({
+  c1
+})
+
+// &#x518D;&#x6B21;&#x521B;&#x5EFA; ref&#xFF0C;&#x547D;&#x540D;&#x4E3A; c2
+const c2 = ref(9)
+// &#x5C06; &#x65E7; ref c1 &#x66FF;&#x6362;&#x4E3A; &#x65B0; ref c2
+state.c1 = c2
+state.c1++
+
+console.log(state.c1) // &#x8F93;&#x51FA; 10
+console.log(c2.value) // &#x8F93;&#x51FA; 10
+console.log(c1.value) // &#x8F93;&#x51FA; 0
+</code></pre><h2 id="4-isref">4. isRef</h2>
+<p><code>isRef()</code>&#x7528;&#x6765;&#x5224;&#x65AD;&#x67D0;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x4E3A;<code>ref()</code> &#x521B;&#x5EFA;&#x51FA;&#x6765;&#x7684;&#x5BF9;&#x8C61;&#xFF1B;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x5F53;&#x9700;&#x8981;&#x5C55;&#x5F00;&#x67D0;&#x4E2A;&#x53EF;&#x80FD;&#x4E3A;<code>ref()</code>&#x521B;&#x5EFA;&#x51FA;&#x6765;&#x7684;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>import { isRef } from &apos;@vue/composition-api&apos;
+
+const unwrapped = isRef(foo) ? foo.value : foo
+</code></pre><h2 id="5torefs">5.toRefs</h2>
+<p><code>toRefs()</code>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5C06;<code>reactive()</code>&#x521B;&#x5EFA;&#x51FA;&#x6765;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x5BF9;&#x8C61;&#xFF0C;&#x8F6C;&#x6362;&#x4E3A;&#x666E;&#x901A;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0A;&#x7684;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x8282;&#x70B9;&#xFF0C;&#x90FD;&#x662F;<code>ref()</code>&#x7C7B;&#x578B;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#xFF0C;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>import { toRefs } from &apos;@vue/composition-api&apos;
+
+setup() {
+    // &#x5B9A;&#x4E49;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x5BF9;&#x8C61;
+    const state = reactive({
+      count: 0
+    })
+
+    // &#x5B9A;&#x4E49;&#x9875;&#x9762;&#x4E0A;&#x53EF;&#x7528;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;
+    const increment = () =&gt; {
+      state.count++
+    }
+
+    // &#x5728; setup &#x4E2D;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4F9B;&#x9875;&#x9762;&#x4F7F;&#x7528;
+    // &#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;
+    return {
+      // &#x5C06; state &#x4E0A;&#x7684;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x90FD;&#x8F6C;&#x5316;&#x4E3A; ref &#x5F62;&#x5F0F;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;
+      ...toRefs(state),
+      // &#x81EA;&#x589E;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;
+      increment
+    }
+}
+</code></pre><p>&#x9875;&#x9762;&#x4E0A;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE; <code>setup()</code> &#x4E2D; <code>return &#x51FA;&#x6765;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;</code>&#xFF1A;</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;&#x5F53;&#x524D;&#x7684;count&#x503C;&#x4E3A;&#xFF1A;&lt;/p&gt;
+    &lt;button @click=&quot;increment&quot;&gt;+1&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre><h3 id="6computed">6.computed</h3>
+<p><code>computed()</code> &#x7528;&#x6765;&#x521B;&#x5EFA;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#xFF0C;<code>computed()</code>&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A; ref &#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x4F7F;&#x7528; <code>computed</code>&#x4E4B;&#x524D;&#x9700;&#x8981;&#x6309;&#x9700;&#x5BFC;&#x5165;&#xFF1A;</p>
+<pre><code>import { computed } from &apos;@vue/composition-api&apos;
+</code></pre><h3 id="61-&#x521B;&#x5EFA;&#x53EA;&#x8BFB;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;">6.1 &#x521B;&#x5EFA;&#x53EA;&#x8BFB;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</h3>
+<p>&#x5728;&#x8C03;&#x7528;<code>computed()</code>&#x51FD;&#x6570;&#x671F;&#x95F4;&#xFF0C;&#x4F20;&#x5165;&#x4E00;&#x4E2A;<code>function &#x51FD;&#x6570;</code>&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x53EA;&#x8BFB;&#x7684;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#xFF0C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>// &#x521B;&#x5EFA;&#x4E00;&#x4E2A; ref &#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;
+const count = ref(1)
+
+// &#x6839;&#x636E; count &#x7684;&#x503C;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x8BA1;&#x7B97;&#x5C5E;&#x6027; plusOne
+// &#x5B83;&#x4F1A;&#x6839;&#x636E;&#x4F9D;&#x8D56;&#x7684; ref &#x81EA;&#x52A8;&#x8BA1;&#x7B97;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684; ref
+const plusOne = computed(() =&gt; count.value + 1)
+
+console.log(plusOne.value) // &#x8F93;&#x51FA; 2
+plusOne.value++ // error
+</code></pre><h3 id="62&#x521B;&#x5EFA;&#x53EF;&#x8BFB;&#x53EF;&#x5199;&#x7684;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;">6.2.&#x521B;&#x5EFA;&#x53EF;&#x8BFB;&#x53EF;&#x5199;&#x7684;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</h3>
+<p>&#x5728;&#x8C03;&#x7528;<code>computed()</code>&#x51FD;&#x6570;&#x671F;&#x95F4;&#xFF0C;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5305;&#x542B;<code>get</code> &#x548C;<code>set</code> &#x51FD;&#x6570;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x53EF;&#x8BFB;&#x53EF;&#x5199;&#x7684;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#xFF0C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>// &#x521B;&#x5EFA;&#x4E00;&#x4E2A; ref &#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;
+const count = ref(1)
+
+// &#x521B;&#x5EFA;&#x4E00;&#x4E2A; computed &#x8BA1;&#x7B97;&#x5C5E;&#x6027;
+const plusOne = computed({
+  // &#x53D6;&#x503C;&#x51FD;&#x6570;
+  get: () =&gt; count.value + 1,
+  // &#x8D4B;&#x503C;&#x51FD;&#x6570;
+  set: val =&gt; {
+    count.value = val - 1
+  }
+})
+
+// &#x4E3A;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1; set &#x51FD;&#x6570;
+plusOne.value = 9
+// &#x89E6;&#x53D1; set &#x51FD;&#x6570;&#x540E;&#xFF0C;count &#x7684;&#x503C;&#x4F1A;&#x88AB;&#x66F4;&#x65B0;
+console.log(count.value) // &#x8F93;&#x51FA; 8
+</code></pre><h2 id="7watch">7.watch</h2>
+<p><code>watch()</code> &#x51FD;&#x6570;&#x7528;&#x6765;&#x76D1;&#x89C6;&#x67D0;&#x4E9B;&#x6570;&#x636E;&#x9879;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x4ECE;&#x800C;&#x89E6;&#x53D1;&#x67D0;&#x4E9B;&#x7279;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x6309;&#x9700;&#x5BFC;&#x5165;&#xFF1A;</p>
+<pre><code>import { watch } from &apos;@vue/composition-api&apos;
+</code></pre><h3 id="71&#x57FA;&#x672C;&#x7528;&#x6CD5;">7.1&#x57FA;&#x672C;&#x7528;&#x6CD5;</h3>
+<pre><code>const count = ref(0)
+
+// &#x5B9A;&#x4E49; watch&#xFF0C;&#x53EA;&#x8981; count &#x503C;&#x53D8;&#x5316;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1; watch &#x56DE;&#x8C03;
+// watch &#x4F1A;&#x5728;&#x521B;&#x5EFA;&#x65F6;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x4E00;&#x6B21;
+watch(() =&gt; console.log(count.value))
+// &#x8F93;&#x51FA; 0
+
+setTimeout(() =&gt; {
+  count.value++
+  // &#x8F93;&#x51FA; 1
+}, 1000)
+</code></pre><h3 id="72-&#x76D1;&#x89C6;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x6E90;">7.2 &#x76D1;&#x89C6;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x6E90;</h3>
+<p><code>&#x76D1;&#x89C6; reactive</code>&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF1A;</p>
+<pre><code>// &#x5B9A;&#x4E49;&#x6570;&#x636E;&#x6E90;
+const state = reactive({ count: 0 })
+// &#x76D1;&#x89C6; state.count &#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x8282;&#x70B9;&#x7684;&#x53D8;&#x5316;
+watch(
+  () =&gt; state.count,
+  (count, prevCount) =&gt; {
+    /* ... */
+  }
+)
+</code></pre><p>&#x76D1;&#x89C6;<code>ref</code> &#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF1A;</p>
+<pre><code>// &#x5B9A;&#x4E49;&#x6570;&#x636E;&#x6E90;
+const count = ref(0)
+// &#x6307;&#x5B9A;&#x8981;&#x76D1;&#x89C6;&#x7684;&#x6570;&#x636E;&#x6E90;
+watch(count, (count, prevCount) =&gt; {
+  /* ... */
+})
+</code></pre><h3 id="73-&#x76D1;&#x89C6;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x6E90;">7.3 &#x76D1;&#x89C6;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x6E90;</h3>
+<p>&#x76D1;&#x89C6; <code>reactive</code> &#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF1A;</p>
+<pre><code>       const state = reactive({ count: 0, name: &apos;zs&apos; })
+       watch(   [() =&gt; state.count, () =&gt; state.name], //
+       Object.values(toRefs(state)),   ([count, name], [prevCount,
+       prevName]) =&gt; {
+           console.log(count) // &#x65B0;&#x7684; count &#x503C;
+           console.log(name) // &#x65B0;&#x7684; name &#x503C;
+           console.log(&apos;------------&apos;)
+           console.log(prevCount) // &#x65E7;&#x7684; count &#x503C;
+           console.log(prevName) // &#x65B0;&#x7684; name &#x503C;   },   {
+           lazy: true // &#x5728; watch &#x88AB;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x6267;&#x884C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x4EE3;&#x7801;   } )
+
+       setTimeout(() =&gt; {   state.count++   state.name = &apos;ls&apos; }, 1000)
+</code></pre><p>&#x76D1;&#x89C6; ref &#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF1A;</p>
+<pre><code>const count = ref(0)
+const name = ref(&apos;zs&apos;)
+
+watch(
+  [count, name], // &#x9700;&#x8981;&#x88AB;&#x76D1;&#x89C6;&#x7684;&#x591A;&#x4E2A; ref &#x6570;&#x636E;&#x6E90;
+  ([count, name], [prevCount, prevName]) =&gt; {
+    console.log(count)
+    console.log(name)
+    console.log(&apos;-------------&apos;)
+    console.log(prevCount)
+    console.log(prevName)
+  },
+  {
+    lazy: true
+  }
+)
+
+setTimeout(() =&gt; {
+  count.value++
+  name.value = &apos;xiaomaolv&apos;
+}, 1000)
+</code></pre><h3 id="74-&#x6E05;&#x9664;&#x76D1;&#x89C6;">7.4 &#x6E05;&#x9664;&#x76D1;&#x89C6;</h3>
+<p>&#x5728; <code>setup()</code>&#x51FD;&#x6570;&#x5185;&#x521B;&#x5EFA;&#x7684;<code>watch</code>&#x76D1;&#x89C6;&#xFF0C;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x88AB;&#x9500;&#x6BC1;&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x505C;&#x6B62;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x660E;&#x786E;&#x5730;&#x505C;&#x6B62;&#x67D0;&#x4E2A;&#x76D1;&#x89C6;&#xFF0C;&#x53EF;&#x4EE5;&#x8C03;&#x7528; <code>watch()</code> &#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5373;&#x53EF;&#xFF0C;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>// &#x521B;&#x5EFA;&#x76D1;&#x89C6;&#xFF0C;&#x5E76;&#x5F97;&#x5230; &#x505C;&#x6B62;&#x51FD;&#x6570;
+const stop = watch(() =&gt; {
+  /* ... */
+})
+
+// &#x8C03;&#x7528;&#x505C;&#x6B62;&#x51FD;&#x6570;&#xFF0C;&#x6E05;&#x9664;&#x5BF9;&#x5E94;&#x7684;&#x76D1;&#x89C6;
+stop()
+</code></pre><h3 id="75-&#x5728;watch&#x4E2D;&#x6E05;&#x9664;&#x65E0;&#x6548;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;">7.5 &#x5728;watch&#x4E2D;&#x6E05;&#x9664;&#x65E0;&#x6548;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;</h3>
+<p>&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x5F53;&#x88AB;<code>watch</code>&#x76D1;&#x89C6;&#x7684;&#x503C;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x6216;<code>watch</code> &#x672C;&#x8EAB;&#x88AB;<code>stop</code> &#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x671F;&#x671B;&#x80FD;&#x591F;&#x6E05;&#x9664;&#x90A3;&#x4E9B;&#x65E0;&#x6548;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;<code>watch</code> &#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;<code>cleanup registrator function</code> &#x6765;&#x6267;&#x884C;&#x6E05;&#x9664;&#x7684;&#x5DE5;&#x4F5C;&#x3002;&#x8FD9;&#x4E2A;&#x6E05;&#x9664;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x5982;&#x4E0B;&#x60C5;&#x51B5;&#x4E0B;&#x88AB;&#x8C03;&#x7528;&#xFF1A;</p>
+<p><code>watch</code> &#x88AB;&#x91CD;&#x590D;&#x6267;&#x884C;&#x4E86;
+<code>watch</code> &#x88AB;&#x5F3A;&#x5236; stop &#x4E86;
+<code>Template</code> &#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>/* template &#x4E2D;&#x7684;&#x4EE3;&#x7801; */ &lt;input type=&quot;text&quot; v-model=&quot;keywords&quot; /&gt;
+</code></pre><p>Script &#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>// &#x5B9A;&#x4E49;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E; keywords
+const keywords = ref(&apos;&apos;)
+
+// &#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#xFF1A;&#x6253;&#x5370;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x5173;&#x952E;&#x8BCD;
+const asyncPrint = val =&gt; {
+  // &#x5EF6;&#x65F6; 1 &#x79D2;&#x540E;&#x6253;&#x5370;
+  return setTimeout(() =&gt; {
+    console.log(val)
+  }, 1000)
+}
+
+// &#x5B9A;&#x4E49; watch &#x76D1;&#x542C;
+watch(
+  keywords,
+  (keywords, prevKeywords, onCleanup) =&gt; {
+    // &#x6267;&#x884C;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#xFF0C;&#x5E76;&#x5F97;&#x5230;&#x5173;&#x95ED;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x7684; timerId
+    const timerId = asyncPrint(keywords)
+
+    // &#x5982;&#x679C; watch &#x76D1;&#x542C;&#x88AB;&#x91CD;&#x590D;&#x6267;&#x884C;&#x4E86;&#xFF0C;&#x5219;&#x4F1A;&#x5148;&#x6E05;&#x9664;&#x4E0A;&#x6B21;&#x672A;&#x5B8C;&#x6210;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;
+    onCleanup(() =&gt; clearTimeout(timerId))
+  },
+  // watch &#x521A;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x6267;&#x884C;
+  { lazy: true }
+)
+
+// &#x628A; template &#x4E2D;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E; return &#x51FA;&#x53BB;
+return {
+  keywords
+}
+</code></pre><h2 id="8lifecycle-hooks">8.LifeCycle Hooks</h2>
+<p>&#x65B0;&#x7248;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x9700;&#x5BFC;&#x5165;&#x5230;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E14;&#x53EA;&#x80FD;&#x5728;<code>setup()</code>&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>import { onMounted, onUpdated, onUnmounted } from &apos;@vue/composition-api&apos;
+
+const MyComponent = {
+  setup() {
+    onMounted(() =&gt; {
+      console.log(&apos;mounted!&apos;)
+    })
+    onUpdated(() =&gt; {
+      console.log(&apos;updated!&apos;)
+    })
+    onUnmounted(() =&gt; {
+      console.log(&apos;unmounted!&apos;)
+    })
+  }
+}
+</code></pre><p>&#x4E0B;&#x9762;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x662F; vue 2.x &#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x4E0E;&#x65B0;&#x7248;<code>Composition API</code> &#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF1A;</p>
+<ul>
+<li><code>beforeCreate</code>-&gt; <code>use setup()</code></li>
+<li><code>created</code> -&gt;<code>use setup()</code></li>
+<li><code>beforeMount</code>-&gt; <code>onBeforeMount</code></li>
+<li><code>mounted</code> -&gt;<code>onMounted</code></li>
+<li><code>beforeUpdate</code> -&gt;<code>onBeforeUp</code>date`</li>
+<li><code>updated&#xB7; -&gt;</code>onUpdated`</li>
+<li><code>beforeDestroy</code>-&gt;<code>onBeforeUnmount</code></li>
+<li><code>destroyed</code> -&gt; <code>onUnmounted</code></li>
+<li><code>errorCaptured</code> -&gt;<code>onErrorCaptured</code></li>
+</ul>
+<h2 id="9-provide--inject">9. provide &amp; inject</h2>
+<p><code>provide()</code> &#x548C;<code>inject()</code>&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5D4C;&#x5957;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;&#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x5728;<code>setup()</code>&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528;&#x3002;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;<code>provide()</code>&#x51FD;&#x6570;&#x5411;&#x4E0B;&#x4F20;&#x9012;&#x6570;&#x636E;&#xFF1B;&#x5B50;&#x7EA7;&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;<code>inject()</code>&#x83B7;&#x53D6;&#x4E0A;&#x5C42;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="91-&#x5171;&#x4EAB;&#x666E;&#x901A;&#x6570;&#x636E;">9.1 &#x5171;&#x4EAB;&#x666E;&#x901A;&#x6570;&#x636E;</h3>
+<p><code>App.vue &#x6839;&#x7EC4;&#x4EF6;&#xFF1A;</code></p>
+<pre><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;h1&gt;App &#x6839;&#x7EC4;&#x4EF6;&lt;/h1&gt;
+    &lt;hr /&gt;
+    &lt;LevelOne /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import LevelOne from &apos;./components/LevelOne&apos;
+// 1. &#x6309;&#x9700;&#x5BFC;&#x5165; provide
+import { provide } from &apos;@vue/composition-api&apos;
+
+export default {
+  name: &apos;app&apos;,
+  setup() {
+    // 2. App &#x6839;&#x7EC4;&#x4EF6;&#x4F5C;&#x4E3A;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7; provide &#x51FD;&#x6570;&#x5411;&#x5B50;&#x7EA7;&#x7EC4;&#x4EF6;&#x5171;&#x4EAB;&#x6570;&#x636E;&#xFF08;&#x4E0D;&#x9650;&#x5C42;&#x7EA7;&#xFF09;
+    //    provide(&apos;&#x8981;&#x5171;&#x4EAB;&#x7684;&#x6570;&#x636E;&#x540D;&#x79F0;&apos;, &#x88AB;&#x5171;&#x4EAB;&#x7684;&#x6570;&#x636E;)
+    provide(&apos;globalColor&apos;, &apos;red&apos;)
+  },
+  components: {
+    LevelOne
+  }
+}
+&lt;/script&gt;
+</code></pre><p><code>LevelOne.vue &#x7EC4;&#x4EF6;&#xFF1A;</code></p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;!-- 4. &#x901A;&#x8FC7;&#x5C5E;&#x6027;&#x7ED1;&#x5B9A;&#xFF0C;&#x4E3A;&#x6807;&#x7B7E;&#x8BBE;&#x7F6E;&#x5B57;&#x4F53;&#x989C;&#x8272; --&gt;
+    &lt;h3 :style=&quot;{color: themeColor}&quot;&gt;Level One&lt;/h3&gt;
+    &lt;hr /&gt;
+    &lt;LevelTwo /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import LevelTwo from &apos;./LevelTwo&apos;
+// 1. &#x6309;&#x9700;&#x5BFC;&#x5165; inject
+import { inject } from &apos;@vue/composition-api&apos;
+
+export default {
+  setup() {
+    // 2. &#x8C03;&#x7528; inject &#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x540D;&#x79F0;&#xFF0C;&#x83B7;&#x53D6;&#x5230;&#x7236;&#x7EA7;&#x5171;&#x4EAB;&#x7684;&#x6570;&#x636E;
+    const themeColor = inject(&apos;globalColor&apos;)
+
+    // 3. &#x628A;&#x63A5;&#x6536;&#x5230;&#x7684;&#x5171;&#x4EAB;&#x6570;&#x636E; return &#x7ED9; Template &#x4F7F;&#x7528;
+    return {
+      themeColor
+    }
+  },
+  components: {
+    LevelTwo
+  }
+}
+&lt;/script&gt;
+</code></pre><p><code>LevelTwo.vue &#x7EC4;&#x4EF6;&#xFF1A;</code></p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;!-- 4. &#x901A;&#x8FC7;&#x5C5E;&#x6027;&#x7ED1;&#x5B9A;&#xFF0C;&#x4E3A;&#x6807;&#x7B7E;&#x8BBE;&#x7F6E;&#x5B57;&#x4F53;&#x989C;&#x8272; --&gt;
+    &lt;h5 :style=&quot;{color: themeColor}&quot;&gt;Level Two&lt;/h5&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// 1. &#x6309;&#x9700;&#x5BFC;&#x5165; inject
+import { inject } from &apos;@vue/composition-api&apos;
+
+export default {
+  setup() {
+    // 2. &#x8C03;&#x7528; inject &#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x540D;&#x79F0;&#xFF0C;&#x83B7;&#x53D6;&#x5230;&#x7236;&#x7EA7;&#x5171;&#x4EAB;&#x7684;&#x6570;&#x636E;
+    const themeColor = inject(&apos;globalColor&apos;)
+
+    // 3. &#x628A;&#x63A5;&#x6536;&#x5230;&#x7684;&#x5171;&#x4EAB;&#x6570;&#x636E; return &#x7ED9; Template &#x4F7F;&#x7528;
+    return {
+      themeColor
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre><h3 id="92-&#x5171;&#x4EAB;ref-&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;">9.2 &#x5171;&#x4EAB;ref &#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;</h3>
+<p>&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x4E86;&#x70B9;&#x6309;&#x94AE;&#x5207;&#x6362;&#x4E3B;&#x9898;&#x989C;&#x8272;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4E3B;&#x8981;&#x4FEE;&#x6539;&#x4E86; <code>App.vue</code>&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;<code>LevelOne.vue</code> &#x548C;<code>LevelTwo.vue</code>&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x4E0D;&#x53D7;&#x4EFB;&#x4F55;&#x6539;&#x53D8;&#xFF1A;</p>
+<pre><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;h1&gt;App &#x6839;&#x7EC4;&#x4EF6;&lt;/h1&gt;
+
+    &lt;!-- &#x70B9;&#x51FB; App.vue &#x4E2D;&#x7684;&#x6309;&#x94AE;&#xFF0C;&#x5207;&#x6362;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#x6587;&#x5B57;&#x7684;&#x989C;&#x8272; --&gt;
+    &lt;button @click=&quot;themeColor=&apos;red&apos;&quot;&gt;&#x7EA2;&#x8272;&lt;/button&gt;
+    &lt;button @click=&quot;themeColor=&apos;blue&apos;&quot;&gt;&#x84DD;&#x8272;&lt;/button&gt;
+    &lt;button @click=&quot;themeColor=&apos;orange&apos;&quot;&gt;&#x6A58;&#x9EC4;&#x8272;&lt;/button&gt;
+
+    &lt;hr /&gt;
+    &lt;LevelOne /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import LevelOne from &apos;./components/LevelOne&apos;
+import { provide, ref } from &apos;@vue/composition-api&apos;
+
+export default {
+  name: &apos;app&apos;,
+  setup() {
+    // &#x5B9A;&#x4E49; ref &#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;
+    const themeColor = ref(&apos;red&apos;)
+
+    // &#x628A; ref &#x6570;&#x636E;&#x901A;&#x8FC7; provide &#x63D0;&#x4F9B;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;
+    provide(&apos;globalColor&apos;, themeColor)
+
+    // setup &#x4E2D; return &#x6570;&#x636E;&#x4F9B;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x7684; Template &#x4F7F;&#x7528;
+    return {
+      themeColor
+    }
+  },
+  components: {
+    LevelOne
+  }
+}
+&lt;/script&gt;
+</code></pre><h2 id="10-template-refs">10. template refs</h2>
+<p>&#x901A;&#x8FC7;<code>ref()</code> &#x8FD8;&#x53EF;&#x4EE5;&#x5F15;&#x7528;&#x9875;&#x9762;&#x4E0A;&#x7684;&#x5143;&#x7D20;&#x6216;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h3 id="101-&#x5143;&#x7D20;&#x7684;&#x5F15;&#x7528;">10.1 &#x5143;&#x7D20;&#x7684;&#x5F15;&#x7528;</h3>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h3 ref=&quot;h3Ref&quot;&gt;TemplateRefOne&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import { ref, onMounted } from &apos;@vue/composition-api&apos;
+
+export default {
+  setup() {
+    // &#x521B;&#x5EFA;&#x4E00;&#x4E2A; DOM &#x5F15;&#x7528;
+    const h3Ref = ref(null)
+
+    // &#x5728; DOM &#x9996;&#x6B21;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x83B7;&#x53D6;&#x5230;&#x5143;&#x7D20;&#x7684;&#x5F15;&#x7528;
+    onMounted(() =&gt; {
+      // &#x4E3A; dom &#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x5B57;&#x4F53;&#x989C;&#x8272;
+      // h3Ref.value &#x662F;&#x539F;&#x751F;DOM&#x5BF9;&#x8C61;
+      h3Ref.value.style.color = &apos;red&apos;
+    })
+
+    // &#x628A;&#x521B;&#x5EFA;&#x7684;&#x5F15;&#x7528; return &#x51FA;&#x53BB;
+    return {
+      h3Ref
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre><h3 id="102-&#x7EC4;&#x4EF6;&#x7684;&#x5F15;&#x7528;">10.2 &#x7EC4;&#x4EF6;&#x7684;&#x5F15;&#x7528;</h3>
+<p><code>TemplateRefOne.vue</code> &#x4E2D;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h3&gt;TemplateRefOne&lt;/h3&gt;
+
+    &lt;!-- 4. &#x70B9;&#x51FB;&#x6309;&#x94AE;&#x5C55;&#x793A;&#x5B50;&#x7EC4;&#x4EF6;&#x7684; count &#x503C; --&gt;
+    &lt;button @click=&quot;showNumber&quot;&gt;&#x83B7;&#x53D6;TemplateRefTwo&#x4E2D;&#x7684;count&#x503C;&lt;/button&gt;
+
+    &lt;hr /&gt;
+    &lt;!-- 3. &#x4E3A;&#x7EC4;&#x4EF6;&#x6DFB;&#x52A0; ref &#x5F15;&#x7528; --&gt;
+    &lt;TemplateRefTwo ref=&quot;comRef&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import { ref } from &apos;@vue/composition-api&apos;
+import TemplateRefTwo from &apos;./TemplateRefTwo&apos;
+
+export default {
+  setup() {
+    // 1. &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684; ref &#x5F15;&#x7528;
+    const comRef = ref(null)
+
+    // 5. &#x5C55;&#x793A;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D; count &#x7684;&#x503C;
+    const showNumber = () =&gt; {
+      console.log(comRef.value.count)
+    }
+
+    // 2. &#x628A;&#x521B;&#x5EFA;&#x7684;&#x5F15;&#x7528; return &#x51FA;&#x53BB;
+    return {
+      comRef,
+      showNumber
+    }
+  },
+  components: {
+    TemplateRefTwo
+  }
+}
+&lt;/script&gt;
+</code></pre><p><code>TemplateRefTwo.vue</code>&#x4E2D;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h5&gt;TemplateRefTwo --- &lt;/h5&gt;
+    &lt;!-- 3. &#x70B9;&#x51FB;&#x6309;&#x94AE;&#xFF0C;&#x8BA9; count &#x503C;&#x81EA;&#x589E; +1 --&gt;
+    &lt;button @click=&quot;count+=1&quot;&gt;+1&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import { ref } from &apos;@vue/composition-api&apos;
+
+export default {
+  setup() {
+    // 1. &#x5B9A;&#x4E49;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x6570;&#x636E;
+    const count = ref(0)
+
+    // 2. &#x628A;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E; return &#x7ED9; Template &#x4F7F;&#x7528;
+    return {
+      count
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre><h2 id="11createcomponent">11.createComponent</h2>
+<pre><code>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x9664;&#x975E;&#x4F60;&#x60F3;&#x8981;&#x5B8C;&#x7F8E;&#x7ED3;&#x5408;` TypeScript` &#x63D0;&#x4F9B;&#x7684;&#x7C7B;&#x578B;&#x63A8;&#x65AD;&#x6765;&#x8FDB;&#x884C;&#x9879;&#x76EE;&#x7684;&#x5F00;&#x53D1;&#x3002;
+
+&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4EC5;&#x4EC5;&#x63D0;&#x4F9B;&#x4E86;&#x7C7B;&#x578B;&#x63A8;&#x65AD;&#xFF0C;&#x65B9;&#x4FBF;&#x5728;&#x7ED3;&#x5408;`TypeScript` &#x4E66;&#x5199;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x80FD;&#x4E3A; `setup()` &#x4E2D;&#x7684; `props` &#x63D0;&#x4F9B;&#x5B8C;&#x6574;&#x7684;&#x7C7B;&#x578B;&#x63A8;&#x65AD;&#x3002;
+
+import { createComponent } from &apos;vue&apos;
+
+export default createComponent({
+  props: {
+    foo: String
+  },
+  setup(props) {
+    props.foo // &lt;- type: string
+  }
+})
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Vue-router.html" class="navigation navigation-prev " aria-label="Previous page: Vue-router">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="虚拟dom和diff算法.html" class="navigation navigation-next " aria-label="Next page: 虚拟dom和diff算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Vue3新特性","level":"1.8.7","depth":2,"next":{"title":"虚拟dom和diff算法","level":"1.8.8","depth":2,"path":"5_vue/虚拟dom和diff算法.md","ref":"5_vue/虚拟dom和diff算法.md","articles":[]},"previous":{"title":"Vue-router","level":"1.8.6","depth":2,"path":"5_vue/Vue-router.md","ref":"5_vue/Vue-router.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_vue/vue3新特性.md","mtime":"2022-09-14T14:06:43.213Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-14T14:22:41.174Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

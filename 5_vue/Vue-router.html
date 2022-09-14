@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>vue路由 · GitBook</title>
+        <title>Vue-router · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="虚拟dom和diff算法.html" />
+    <link rel="next" href="vue3新特性.html" />
     
     
     <link rel="prev" href="组件的通信.html" />
@@ -468,7 +468,7 @@
                 <a href="Vue-router.html">
             
                     
-                    vue路由
+                    Vue-router
             
                 </a>
             
@@ -476,7 +476,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.7" data-path="虚拟dom和diff算法.html">
+        <li class="chapter " data-level="1.8.7" data-path="vue3新特性.html">
+            
+                <a href="vue3新特性.html">
+            
+                    
+                    Vue3新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="虚拟dom和diff算法.html">
             
                 <a href="虚拟dom和diff算法.html">
             
@@ -489,7 +502,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.8" data-path="vue和angular的区别.html">
+        <li class="chapter " data-level="1.8.9" data-path="vue和angular的区别.html">
             
                 <a href="vue和angular的区别.html">
             
@@ -502,7 +515,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.9" data-path="nextTick.html">
+        <li class="chapter " data-level="1.8.10" data-path="nextTick.html">
             
                 <a href="nextTick.html">
             
@@ -515,25 +528,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.10" data-path="keep-alive.html">
+        <li class="chapter " data-level="1.8.11" data-path="keep-alive.html">
             
                 <a href="keep-alive.html">
             
                     
                     keep-alive
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.8.11" data-path="./">
-            
-                <a href="./">
-            
-                    
-                    vue3
             
                 </a>
             
@@ -809,7 +809,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >vue路由</a>
+        <a href=".." >Vue-router</a>
     </h1>
 </div>
 
@@ -824,41 +824,129 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="10&#x3001;vue-router-&#x8DEF;&#x7531;&#x5B88;&#x536B;&#x6709;&#x54EA;&#x4E9B;-&#xFF1F;">10&#x3001;Vue-router &#x8DEF;&#x7531;&#x5B88;&#x536B;&#x6709;&#x54EA;&#x4E9B; &#xFF1F;</h3>
+                                <h1 id="vue-router&#x57FA;&#x672C;&#x4F7F;&#x7528;">vue-router&#x57FA;&#x672C;&#x4F7F;&#x7528;</h1>
+<ul>
+<li>install&#x5B89;&#x88C5;</li>
+<li>index.js&#x6587;&#x4EF6;&#x4E2D;import&#x5BFC;&#x5165;</li>
+<li>Vue.use(Router)
+&#x4F8B;&#x5B50;&#xFF1A;
+<img src="https://img-blog.csdnimg.cn/139c484f55f344428f88507fa6e65904.png" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">
+&#x6CE8;&#x610F;&#xFF1A;<code>{path:&apos;/login/:value&apos;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x53C2;&#x6570;}</code></li>
+<li>&#x521B;&#x5EFA;&#x8DEF;&#x7531;&#x5B9E;&#x4F8B;&#xFF0C;&#x5E76;&#x914D;&#x7F6E;&#x8DEF;&#x7531;<pre><code>const routet = new Router({
+  router,//&#x6CE8;&#x518C;&#x4E0A;&#x9762;&#x7684;&#x8DEF;&#x7531;&#x4FE1;&#x606F;
+  mode:&apos;hash&apos;,//&#x8DEF;&#x7531;&#x540E;&#x9762;&#x5E26;&#x4E0A;#
+  //mode:&apos;history&apos;,//history&#x8DEF;&#x7531;
+})
+</code></pre></li>
+<li>&#x628A;&#x8DEF;&#x7531;&#x5B9E;&#x4F8B;export&#x51FA;&#x53BB;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF1A;chrildren&#x4E2D;&#x5B9A;&#x4E49;&#x5B50;&#x8DEF;&#x7531;&#x4FE1;&#x606F;</p>
+<h1 id="router-view">router-view</h1>
+<h1 id="router-link">router-link</h1>
+<pre><code>// &#x5B57;&#x7B26;&#x4E32;
+&lt;router-link to=&quot;apple&quot;&gt; to apple&lt;/router-link&gt;
+// &#x5BF9;&#x8C61;
+&lt;router-link :to=&quot;{path:&apos;apple&apos;}&quot;&gt; to apple&lt;/router-link&gt;
+// &#x547D;&#x540D;&#x8DEF;&#x7531;
+&lt;router-link :to=&quot;{name: &apos;applename&apos;}&quot;&gt; to apple&lt;/router-link&gt;
+//&#x76F4;&#x63A5;&#x8DEF;&#x7531;&#x5E26;&#x67E5;&#x8BE2;&#x53C2;&#x6570;query&#xFF0C;&#x5730;&#x5740;&#x680F;&#x53D8;&#x6210; /apple?color=red
+&lt;router-link :to=&quot;{path: &apos;apple&apos;, query: {color: &apos;red&apos; }}&quot;&gt; to apple&lt;/router-link&gt;
+// &#x547D;&#x540D;&#x8DEF;&#x7531;&#x5E26;&#x67E5;&#x8BE2;&#x53C2;&#x6570;query&#xFF0C;&#x5730;&#x5740;&#x680F;&#x53D8;&#x6210;/apple?color=red
+&lt;router-link :to=&quot;{name: &apos;applename&apos;, query: {color: &apos;red&apos; }}&quot;&gt; to apple&lt;/router-link&gt;
+//&#x76F4;&#x63A5;&#x8DEF;&#x7531;&#x5E26;&#x8DEF;&#x7531;&#x53C2;&#x6570;params&#xFF0C;params &#x4E0D;&#x751F;&#x6548;&#xFF0C;&#x5982;&#x679C;&#x63D0;&#x4F9B;&#x4E86; path&#xFF0C;params &#x4F1A;&#x88AB;&#x5FFD;&#x7565;
+&lt;router-link :to=&quot;{path: &apos;apple&apos;, params: { color: &apos;red&apos; }}&quot;&gt; to apple&lt;/router-link&gt;
+// &#x547D;&#x540D;&#x8DEF;&#x7531;&#x5E26;&#x8DEF;&#x7531;&#x53C2;&#x6570;params&#xFF0C;&#x5730;&#x5740;&#x680F;&#x662F;/apple/red
+&lt;router-link :to=&quot;{name: &apos;applename&apos;, params: { color: &apos;red&apos; }}&quot;&gt; to apple&lt;/router-link&gt;
+</code></pre><p>&#xFF08;&#x4E00;&#xFF09;<code>&lt;router-link&gt;</code>&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x6709;&#xFF1A;</p>
+<p>to &#x3001;replace&#x3001; append&#x3001;  tag&#x3001;  active-class&#x3001; exact &#x3001; event&#x3001;  exact-active-class</p>
+<p>1&#x3001;to&#xFF08;&#x5FC5;&#x9009;&#x53C2;&#x6570;&#xFF09;&#xFF1A;&#x7C7B;&#x578B;string/location</p>
+<p>2&#x3001;tag&#xFF1A;&#x7C7B;&#x578B;: string    &#x9ED8;&#x8BA4;&#x503C;: &quot;a&quot; </p>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981; <router-link> &#x6E32;&#x67D3;&#x6210;&#x67D0;&#x79CD;&#x6807;&#x7B7E;&#xFF0C;&#x4F8B;&#x5982;<code>&lt;li&gt;</code>&#x3002; &#x4E8E;&#x662F;&#x6211;&#x4EEC;&#x4F7F;&#x7528; tag prop &#x7C7B;&#x6307;&#x5B9A;&#x4F55;&#x79CD;&#x6807;&#x7B7E;&#xFF0C;&#x540C;&#x6837;&#x5B83;&#x8FD8;&#x662F;&#x4F1A;&#x76D1;&#x542C;&#x70B9;&#x51FB;&#xFF0C;&#x89E6;&#x53D1;&#x5BFC;&#x822A;&#x3002;</router-link></p>
+<pre><code>&lt;router-link :to=&quot;{name:&apos;schedule&apos;,query:{aa:&apos;dsd&apos;}}&quot;  tag=&quot;li&quot;&gt;&#x8DF3;&#x8F6C;&lt;/router-link&gt;
+</code></pre><p>&#x5982;&#x679C;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5728;&#x8FD9;&#x4E2A;li&#x6807;&#x7B7E;&#x4E2D;&#x6DFB;&#x52A0;a&#x6807;&#x7B7E;,&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x4E3A;a&#x6807;&#x7B7E;&#x6DFB;&#x52A0;href&#x5C5E;&#x6027;&#x5373;&#x53EF;&#x54E6;</p>
+<pre><code>&lt;router-link :to=&quot;{name:&apos;schedule&apos;,query:{aa:&apos;dsd&apos;}}&quot;  tag=&quot;li&quot;&gt;
+    &lt;a&gt;&#x8DF3;&#x8F6C;&lt;/a&gt;
+&lt;/router-link&gt;
+</code></pre><p>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>&lt;a&gt;</code>&#x5C06;&#x4F5C;&#x4E3A;&#x771F;&#x5B9E;&#x7684;&#x94FE;&#x63A5; (&#x5B83;&#x4F1A;&#x83B7;&#x5F97;&#x6B63;&#x786E;&#x7684; href &#x7684;)&#xFF0C;&#x800C; &quot;&#x6FC0;&#x6D3B;&#x65F6;&#x7684;CSS&#x7C7B;&#x540D;&quot; &#x5219;&#x8BBE;&#x7F6E;&#x5230;&#x5916;&#x5C42;&#x7684;<code>&lt;li&gt;</code>&#x3002;</p>
+<p>3&#x3001;active-class   &#x7C7B;&#x578B;: string    &#x9ED8;&#x8BA4;&#x503C;: &quot;router-link-active&quot;</p>
+<p>&#x8BBE;&#x7F6E; &#x94FE;&#x63A5;&#x6FC0;&#x6D3B;&#x65F6;&#x4F7F;&#x7528;&#x7684; CSS &#x7C7B;&#x540D;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8DEF;&#x7531;&#x7684;&#x6784;&#x9020;&#x9009;&#x9879; linkActiveClass &#x6765;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x3002;</p>
+<pre><code>&lt;router-link :to=&quot;{name:&apos;schedule&apos;,query:{aa:&apos;dsd&apos;}}&quot;  tag=&quot;a&quot;  active-class=&quot;red&quot;&gt;&#x8DF3;&#x8F6C;&lt;/router-link&gt;
+</code></pre><p>&#x9ED8;&#x8BA4;&#x503C;&#x901A;&#x8FC7;&#x8DEF;&#x7531;&#x7684;&#x6784;&#x9020;&#x9009;&#x9879; linkActiveClass &#x6765;&#x5168;&#x5C40;&#x914D;&#x7F6E;,&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>export default new Router({
+  mode:&apos;history&apos;,
+  linkActiveClass:&apos;is-active&apos;,
+  routes: [
+    {
+      path:&apos;/about&apos;,
+      component:about
+    }
+]
+})
+</code></pre><p>4&#x3001;exact-active-class   &#x7C7B;&#x578B;: string    &#x9ED8;&#x8BA4;&#x503C;: &quot;router-link-exact-active&quot;</p>
+<p>&#x914D;&#x7F6E;&#x5F53;&#x94FE;&#x63A5;&#x88AB;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x7684;&#x65F6;&#x5019;&#x5E94;&#x8BE5;&#x6FC0;&#x6D3B;&#x7684; class&#x3002;&#x6CE8;&#x610F;&#x9ED8;&#x8BA4;&#x503C;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8DEF;&#x7531;&#x6784;&#x9020;&#x51FD;&#x6570;&#x9009;&#x9879; linkExactActiveClass &#x8FDB;&#x884C;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x7684;&#x3002;</p>
+<p>5&#x3001;exact     &#x7C7B;&#x578B;: boolean     &#x9ED8;&#x8BA4;&#x503C;: false</p>
+<p>&#x6309;&#x7167;&#x8FD9;&#x4E2A;&#x89C4;&#x5219;&#xFF0C;&#x6BCF;&#x4E2A;&#x8DEF;&#x7531;&#x90FD;&#x4F1A;&#x6FC0;&#x6D3B;<code>&lt;router-link to=&quot;/&quot;&gt;</code>&#xFF01;&#x60F3;&#x8981;&#x94FE;&#x63A5;&#x4F7F;&#x7528; &quot;exact &#x5339;&#x914D;&#x6A21;&#x5F0F;&quot;&#xFF0C;&#x5219;&#x4F7F;&#x7528; exact &#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code>&lt;li&gt;&lt;router-link to=&quot;/&quot;&gt;&#x5168;&#x5C40;&#x5339;&#x914D;&lt;/router-link&gt;&lt;/li&gt;
+&lt;li&gt;&lt;router-link to=&quot;/&quot; exact&gt;&#x4E25;&#x683C;&#x5339;&#x914D;&lt;/router-link&gt;&lt;/li&gt;
+</code></pre><p>&#x7B80;&#x5355;&#x70B9;&#x8BF4;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x7684;&#x8BDD;&#xFF0C;&#x5982;&#x679C;&#x5730;&#x5740;&#x662F;/aa,&#x6216;/aa/bb&#xFF0C;&#x2026;&#x2026;&#x90FD;&#x4F1A;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;</p>
+<p>&#x4F46;&#x52A0;&#x4E0A;exact&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x5730;&#x5740;&#x662F;/&#x65F6;&#x88AB;&#x5339;&#x914D;&#xFF0C;&#x5176;&#x4ED6;&#x90FD;&#x4E0D;&#x4F1A;&#x5339;&#x914D;&#x6210;&#x529F;</p>
+<p>6&#x3001;event       &#x7C7B;&#x578B;: string | Array<code>&lt;string&gt;</code>   &#x9ED8;&#x8BA4;&#x503C;: &apos;click&apos;          &#x58F0;&#x660E;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x89E6;&#x53D1;&#x5BFC;&#x822A;&#x7684;&#x4E8B;&#x4EF6;&#x3002;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p><ro`uter-link to="/document" event="mouseover">document&lt;/router-link&gt;`
+&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0D;&#x52A0;event&#xFF0C;&#x90A3;&#x4E48;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x5F53;&#x6211;&#x4EEC;&#x70B9;&#x51FB;document&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x4F46;&#x5F53;&#x6211;&#x4EEC;&#x52A0;&#x4E0A;event&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x89E6;&#x53D1;&#x5BFC;&#x822A;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x9F20;&#x6807;&#x79FB;&#x5165;&#x4E8B;&#x4EF6;</ro`uter-link></p>
+<p>7&#x3001;replace   &#x7C7B;&#x578B;: boolean  &#x9ED8;&#x8BA4;&#x503C;: false   </p>
+<p>&#x8BBE;&#x7F6E; replace &#x5C5E;&#x6027;&#x7684;&#x8BDD;&#xFF0C;&#x5F53;&#x70B9;&#x51FB;&#x65F6;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; router.replace() &#x800C;&#x4E0D;&#x662F; router.push()&#xFF0C;&#x4E8E;&#x662F;&#x5BFC;&#x822A;&#x540E;&#x4E0D;&#x4F1A;&#x7559;&#x4E0B; history &#x8BB0;&#x5F55;&#x3002;</p>
+<p>8&#x3001;append    &#x7C7B;&#x578B;: boolean   &#x9ED8;&#x8BA4;&#x503C;: false     &#x8BBE;&#x7F6E; append &#x5C5E;&#x6027;&#x540E;&#xFF0C;&#x5219;&#x5728;&#x5F53;&#x524D; (&#x76F8;&#x5BF9;) &#x8DEF;&#x5F84;&#x524D;&#x6DFB;&#x52A0;&#x57FA;&#x8DEF;&#x5F84;</p>
+<p>9&#x3001;&#x53E6;&#x5916;&#xFF0C;&#x52A0;&#x4E0A;target&#x5C5E;&#x6027;&#x4E3A;&quot;_blank&quot;,&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x9875;&#x9762;</p>
+<pre><code>&lt;router-link :to=&quot;{name:&apos;schedule&apos;,query:{aa:&apos;dsd&apos;}}&quot;  tag=&quot;a&quot; append  target=&quot;_blank&quot; &gt;
+     &#x8DF3;&#x8F6C;
+&lt;/router-link&gt;
+</code></pre><h1 id="vue-router-&#x8DEF;&#x7531;&#x5B88;&#x536B;&#x6709;&#x54EA;&#x4E9B;-&#xFF1F;">Vue-router &#x8DEF;&#x7531;&#x5B88;&#x536B;&#x6709;&#x54EA;&#x4E9B; &#xFF1F;</h1>
 <p>vue&#x8DEF;&#x7531;&#x5B88;&#x536B;&#x6709;&#x4E09;&#x79CD;&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#xFF1A;</p>
 <ul>
 <li>1&#x3001;&#x5168;&#x5C40;&#x5B88;&#x536B;&#x201C;router.beforeEach&#x201D;&#xFF1B;</li>
 <li>2&#x3001;&#x7EC4;&#x4EF6;&#x5185;&#x7684;&#x5B88;&#x536B;&#x201C;beforeRouteEnter&#x201D;&#xFF1B;</li>
-<li>3&#x3001;&#x8DEF;&#x7531;&#x72EC;&#x4EAB;&#x5B88;&#x536B;&#x201C;beforeEnter&#x201D;&#x3002;<h4 id="&#x4E00;&#x3001;&#x5168;&#x5C40;&#x5B88;&#x536B;">&#x4E00;&#x3001;&#x5168;&#x5C40;&#x5B88;&#x536B;</h4>
+<li>3&#x3001;&#x8DEF;&#x7531;&#x72EC;&#x4EAB;&#x5B88;&#x536B;&#x201C;beforeEnter&#x201D;&#x3002;</li>
+<li><h4 id="&#x4E00;&#x3001;&#x5168;&#x5C40;&#x5B88;&#x536B;">&#x4E00;&#x3001;&#x5168;&#x5C40;&#x5B88;&#x536B;</h4>
 </li>
 <li>router.beforeEach((to,from,next)=&gt;{})</li>
 <li>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#xFF0C;to&#xFF1A;&#x8FDB;&#x5165;&#x5230;&#x54EA;&#x4E2A;&#x8DEF;&#x7531;&#x53BB;&#xFF0C;from&#xFF1A;&#x4ECE;&#x54EA;&#x4E2A;&#x8DEF;&#x7531;&#x79BB;&#x5F00;&#xFF0C;next&#xFF1A;&#x51FD;&#x6570;&#xFF0C;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x5C55;&#x793A;&#x4F60;&#x8981;&#x770B;&#x5230;&#x7684;&#x8DEF;&#x7531;&#x9875;&#x9762;&#x3002;</li>
-<li>&#x5982;&#x4E0B;&#x4F8B;&#xFF1A;router/index.js&#x4E2D;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x5B88;&#x536B;,index.js&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;router&#x3002;
-&#x5728;main.js&#x4E2D;&#x8BBE;&#x7F6E;&#x5B88;&#x536B;&#x5DF2;&#x662F;&#x5168;&#x5C40;&#x5B88;&#x536B;&#x3002;&#x5982;&#x4E0B;&#xFF0C;&#x5224;&#x65AD;to.path&#x5F53;&#x524D;&#x5C06;&#x8981;&#x8FDB;&#x5165;&#x7684;&#x8DEF;&#x5F84;&#x662F;&#x5426;&#x4E3A;&#x767B;&#x5F55;&#x6216;&#x6CE8;&#x518C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5C31;&#x6267;&#x884C;next()&#xFF0C;&#x5C55;&#x793A;&#x5F53;&#x524D;&#x754C;&#x9762;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF0C;&#x5C31;&#x5F39;&#x51FA;alert&#xFF0C;&#x7136;&#x540E;&#x79FB;&#x81F3;&#x767B;&#x5F55;&#x754C;&#x9762;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x5B9E;&#x73B0;&#xFF0C;&#x7528;&#x6237;&#x5728;&#x672A;&#x767B;&#x5F55;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x5C55;&#x793A;&#x7684;&#x4E00;&#x76F4;&#x662F;&#x767B;&#x5F55;&#x754C;&#x9762;&#x3002;<pre><code>router.beforeEach((to,from,next)=&gt;{
- if(to.path == &apos;/login&apos; || to.path == &apos;/register&apos;) 
- { next(); }
- else{
-  alert(&apos;&#x60A8;&#x8FD8;&#x6CA1;&#x6709;&#x767B;&#x5F55;&#xFF0C;&#x8BF7;&#x5148;&#x767B;&#x5F55;&apos;);next(&apos;/login&apos;);}
-})
-</code></pre></li>
+<li>&#x5982;&#x4E0B;&#x4F8B;&#xFF1A;router/index.js&#x4E2D;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x5B88;&#x536B;,index.js&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;router&#x3002;</li>
+</ul>
+<p>&#x5728;main.js&#x4E2D;&#x8BBE;&#x7F6E;&#x5B88;&#x536B;&#x5DF2;&#x662F;&#x5168;&#x5C40;&#x5B88;&#x536B;&#x3002;&#x5982;&#x4E0B;&#xFF0C;&#x5224;&#x65AD;to.path&#x5F53;&#x524D;&#x5C06;&#x8981;&#x8FDB;&#x5165;&#x7684;&#x8DEF;&#x5F84;&#x662F;&#x5426;&#x4E3A;&#x767B;&#x5F55;&#x6216;&#x6CE8;&#x518C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5C31;&#x6267;&#x884C;next()&#xFF0C;&#x5C55;&#x793A;&#x5F53;&#x524D;&#x754C;&#x9762;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF0C;&#x5C31;&#x5F39;&#x51FA;alert&#xFF0C;&#x7136;&#x540E;&#x79FB;&#x81F3;&#x767B;&#x5F55;&#x754C;&#x9762;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x5B9E;&#x73B0;&#xFF0C;&#x7528;&#x6237;&#x5728;&#x672A;&#x767B;&#x5F55;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x5C55;&#x793A;&#x7684;&#x4E00;&#x76F4;&#x662F;&#x767B;&#x5F55;&#x754C;&#x9762;&#x3002;</p>
+<pre><code>router.beforeEach((to,from,next)=&gt;{
+    if(to.path == &apos;/login&apos; || to.path == &apos;/register&apos;) 
+    { next(); }
+    else{
+     alert(&apos;&#x60A8;&#x8FD8;&#x6CA1;&#x6709;&#x767B;&#x5F55;&#xFF0C;&#x8BF7;&#x5148;&#x767B;&#x5F55;&apos;);next(&apos;/login&apos;);}
+   })
+</code></pre><ol>
 <li>&#x5168;&#x5C40;&#x540E;&#x7F6E;&#x94A9;&#x5B50;router.afterEach((to,from)=&gt;{})</li>
 <li>&#x5224;&#x65AD;store.gettes.isLogin === false &#x662F;&#x5426;&#x767B;&#x5F55;</li>
 <li>&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;to&#xFF1A;&#x8FDB;&#x5165;&#x5230;&#x54EA;&#x4E2A;&#x8DEF;&#x7531;&#x53BB;&#xFF0C;from&#xFF1A;&#x4ECE;&#x54EA;&#x4E2A;&#x8DEF;&#x7531;&#x79BB;&#x3002;</li>
-<li>&#x5982;&#x4E0B;&#xFF0C;&#x6BCF;&#x6B21;&#x5207;&#x6362;&#x8DEF;&#x7531;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x5F39;&#x51FA;alert&#xFF0C;&#x70B9;&#x51FB;&#x786E;&#x5B9A;&#x540E;&#xFF0C;&#x5C55;&#x793A;&#x5F53;&#x524D;&#x9875;&#x9762;,&#x8DEF;&#x7531;&#x4E0D;&#x4F1A;&#x53D8;&#x5316;<pre><code>router.afterEach((to,from)=&gt;{  alert(&quot;after each&quot;);})
-</code></pre></li>
-<li>&#x5224;&#x65AD;store.gettes.isLogin === false &#x662F;&#x5426;&#x767B;&#x5F55;<h4 id="&#x4E8C;&#x7EC4;&#x4EF6;&#x5185;&#x7684;&#x5B88;&#x536B;">&#x4E8C;.&#x7EC4;&#x4EF6;&#x5185;&#x7684;&#x5B88;&#x536B;</h4>
-</li>
-<li>&#x5230;&#x8FBE;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;beforeRouteEnter:(to,from,next)=&gt;{}</li>
+<li>&#x5982;&#x4E0B;&#xFF0C;&#x6BCF;&#x6B21;&#x5207;&#x6362;&#x8DEF;&#x7531;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x5F39;&#x51FA;alert&#xFF0C;&#x70B9;&#x51FB;&#x786E;&#x5B9A;&#x540E;&#xFF0C;&#x5C55;&#x793A;&#x5F53;&#x524D;&#x9875;&#x9762;,&#x8DEF;&#x7531;&#x4E0D;&#x4F1A;&#x53D8;&#x5316;</li>
+</ol>
+<pre><code>router.afterEach((to,from)=&gt;{  alert(&quot;after each&quot;);})
+</code></pre><ol>
+<li>&#x5224;&#x65AD;store.gettes.isLogin === false &#x662F;&#x5426;&#x767B;&#x5F55;</li>
+</ol>
+<h4 id="&#x4E8C;&#x7EC4;&#x4EF6;&#x5185;&#x7684;&#x5B88;&#x536B;">&#x4E8C;.&#x7EC4;&#x4EF6;&#x5185;&#x7684;&#x5B88;&#x536B;</h4>
+<p><strong>1. &#x5230;&#x8FBE;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;beforeRouteEnter:(to,from,next)=&gt;{}</strong></p>
+<ul>
 <li>&#x5728;Admin.vue&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x70B9;&#x51FB;&#x8F6C;&#x5230;admin&#x8DEF;&#x7531;&#x65F6;&#xFF0C;&#x6267;&#x884C;beforeRouteEnter&#x51FD;&#x6570;</li>
 <li>to&#xFF0C;from&#x53C2;&#x6570;&#x4E0E;&#x4E0A;&#x9762;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4E00;&#x81F4;&#x3002;next&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7565;&#x6709;&#x4E0D;&#x540C;&#x3002;</li>
 <li>&#x5982;&#x4E0B;&#x4F8B;&#xFF0C;data &#x7EC4;&#x4EF6;&#x5185;&#x5B88;&#x536B;&#x6709;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x4EE5;beforeRouteEnter:(to,from,next)=&gt;{ alert(&quot;hello&quot; + this.name);}&#x8FDB;&#x884C;&#x8BBF;&#x95EE;admin&#x9875;&#x9762;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;alert&#x8F93;&#x51FA;hello undefined&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x73B0;&#x5728;&#x8BBF;&#x95EE;&#x4E0D;&#x5230;&#x6211;&#x4EEC;&#x7684;data&#x5C5E;&#x6027;&#xFF0C;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x662F;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x8FD9;&#x4E0E;&#x7684;&#x58F0;&#x660E;&#x5468;&#x671F;&#x6709;&#x5173;&#x3002;&#x5728;&#x6267;&#x884C;&#x5B8C;&#x4E4B;&#x524D;&#xFF0C;data&#x6570;&#x636E;&#x8FD8;&#x672A;&#x6E32;&#x67D3;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#xFF0C;next()&#x4F1A;&#x7ED9;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x5E2E;&#x52A9;&#x5B8C;&#x6210;&#x3002;
-<img src="en-resource://database/4513:1" alt="3cec3a71fc38f1dabcf7cb92f79ff1cd.png"></li>
-<li>&#x79BB;&#x5F00;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;beforeRouteLeave:(to,from,next)=&gt;{}</li>
-<li>&#x70B9;&#x51FB;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x786E;&#x8BA4;&#x79BB;&#x5F00;&#x3002;&#x786E;&#x8BA4;&#x6267;&#x884C;next()&#xFF1B;&#x53D6;&#x6D88;&#x6267;&#x884C;next(false)&#xFF0C;&#x7559;&#x5728;&#x5F53;&#x524D;&#x9875;&#x9762;&#x3002;
-<img src="en-resource://database/4515:1" alt="2870330bf0c77ad13c383bb8dd0d2135.png"><h4 id="&#x4E09;&#x3001;&#x8DEF;&#x7531;&#x72EC;&#x4EAB;&#x7684;&#x5B88;&#x536B;">&#x4E09;&#x3001;&#x8DEF;&#x7531;&#x72EC;&#x4EAB;&#x7684;&#x5B88;&#x536B;</h4>
-</li>
-<li>beforeEnter:(to,from,next)=&gt;{}&#xFF0C;&#x7528;&#x6CD5;&#x4E0E;&#x5168;&#x5C40;&#x5B88;&#x536B;&#x4E00;&#x81F4;&#x3002;&#x53EA;&#x662F;&#xFF0C;&#x5C06;&#x5176;&#x5199;&#x8FDB;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x53EA;&#x5728;&#x8FD9;&#x4E2A;&#x8DEF;&#x7531;&#x4E0B;&#x8D77;&#x4F5C;&#x7528;&#x3002;</li>
+<img src="https://img-blog.csdnimg.cn/3843d583d84143ae9d73941c627eec09.png" alt="\[&#x5916;&#x94FE;&#x56FE;&#x7247;&#x8F6C;&#x5B58;&#x5931;&#x8D25;,&#x6E90;&#x7AD9;&#x53EF;&#x80FD;&#x6709;&#x9632;&#x76D7;&#x94FE;&#x673A;&#x5236;,&#x5EFA;&#x8BAE;&#x5C06;&#x56FE;&#x7247;&#x4FDD;&#x5B58;&#x4E0B;&#x6765;&#x76F4;&#x63A5;&#x4E0A;&#x4F20;(img-y2dX61My-1662297961528)(en-resource://database/4513:1)\]"></li>
 </ul>
+<p><strong>2. &#x7EC4;&#x4EF6;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x65F6;&#xFF0C;beforeRouteUpdate:(to,from,next)=&gt;{}</strong>
+<strong>3. &#x79BB;&#x5F00;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;beforeRouteLeave:(to,from,next)=&gt;{}</strong></p>
+<ul>
+<li>&#x70B9;&#x51FB;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x786E;&#x8BA4;&#x79BB;&#x5F00;&#x3002;&#x786E;&#x8BA4;&#x6267;&#x884C;next()&#xFF1B;&#x53D6;&#x6D88;&#x6267;&#x884C;next(false)&#xFF0C;&#x7559;&#x5728;&#x5F53;&#x524D;&#x9875;&#x9762;&#x3002;
+<img src="https://img-blog.csdnimg.cn/39b1abc4f1f044878d8d7c584a2c5515.png" alt="\[&#x5916;&#x94FE;&#x56FE;&#x7247;&#x8F6C;&#x5B58;&#x5931;&#x8D25;,&#x6E90;&#x7AD9;&#x53EF;&#x80FD;&#x6709;&#x9632;&#x76D7;&#x94FE;&#x673A;&#x5236;,&#x5EFA;&#x8BAE;&#x5C06;&#x56FE;&#x7247;&#x4FDD;&#x5B58;&#x4E0B;&#x6765;&#x76F4;&#x63A5;&#x4E0A;&#x4F20;(img-1P2JMRJi-1662297961530)(en-resource://database/4515:1)\]"></li>
+</ul>
+<h4 id="&#x4E09;&#x3001;&#x8DEF;&#x7531;&#x72EC;&#x4EAB;&#x7684;&#x5B88;&#x536B;">&#x4E09;&#x3001;&#x8DEF;&#x7531;&#x72EC;&#x4EAB;&#x7684;&#x5B88;&#x536B;</h4>
+<ol>
+<li>beforeEnter:(to,from,next)=&gt;{}&#xFF0C;&#x7528;&#x6CD5;&#x4E0E;&#x5168;&#x5C40;&#x5B88;&#x536B;&#x4E00;&#x81F4;&#x3002;&#x53EA;&#x662F;&#xFF0C;&#x5C06;&#x5176;&#x5199;&#x8FDB;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x53EA;&#x5728;&#x8FD9;&#x4E2A;&#x8DEF;&#x7531;&#x4E0B;&#x8D77;&#x4F5C;&#x7528;&#x3002;</li>
+</ol>
 
                                 
                                 </section>
@@ -891,7 +979,7 @@
                 </a>
                 
                 
-                <a href="虚拟dom和diff算法.html" class="navigation navigation-next " aria-label="Next page: 虚拟dom和diff算法">
+                <a href="vue3新特性.html" class="navigation navigation-next " aria-label="Next page: Vue3新特性">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -902,7 +990,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vue路由","level":"1.8.6","depth":2,"next":{"title":"虚拟dom和diff算法","level":"1.8.7","depth":2,"path":"5_vue/虚拟dom和diff算法.md","ref":"5_vue/虚拟dom和diff算法.md","articles":[]},"previous":{"title":"组件的通信","level":"1.8.5","depth":2,"path":"5_vue/组件的通信.md","ref":"5_vue/组件的通信.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_vue/Vue-router.md","mtime":"2022-09-04T11:27:43.509Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-04T13:13:55.493Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Vue-router","level":"1.8.6","depth":2,"next":{"title":"Vue3新特性","level":"1.8.7","depth":2,"path":"5_vue/vue3新特性.md","ref":"5_vue/vue3新特性.md","articles":[]},"previous":{"title":"组件的通信","level":"1.8.5","depth":2,"path":"5_vue/组件的通信.md","ref":"5_vue/组件的通信.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_vue/Vue-router.md","mtime":"2022-09-14T14:16:50.120Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-14T14:22:41.174Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
